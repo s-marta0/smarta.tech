@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/Layout"
 
-import data from '../data'
+import data from '../data/classic-art'
 
 
 class ClassicArt extends React.Component<{}, {}> {

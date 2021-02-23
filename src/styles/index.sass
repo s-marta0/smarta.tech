@@ -65,6 +65,7 @@ body
 
 .Header
   height: rem(70)
+  min-height: rem(70)
   border-bottom: 1px solid $light
   @extend .d-flex
   @extend .flex-row
@@ -82,3 +83,53 @@ body
   @extend .flex-grow-1
   overflow-x: hidden
   overflow-y: scroll
+
+
+.Layout
+  &__project
+    margin-bottom: rem(70)
+    &__video
+      @extend .d-flex
+      @extend .flex-row
+      @extend .align-items-center
+      @extend .justify-content-around
+      &__item
+        @extend .flex-grow-1
+        @extend .mx-3
+    &__h1
+      position: relative
+      z-index: 100
+      margin-top: rem(-50)
+      text-align: center
+    &__description
+      position: relative
+      z-index: 100
+      text-align: center
+
+
+.video
+  width: 100%
+  padding-top: calc(100% / 1920 * 1080)
+  position: relative
+  &__iframe
+    @extend .abs-cover
+    &::after
+      content: ''
+      @extend .abs-cover
+      opacity: 0
+  &::before,
+  &::after
+    content: ''
+    width: 100%
+    height: 10%
+    background-color: $dark
+    position: absolute
+    z-index: 10
+    left: 0
+  &::before
+    top: 0
+    height: 14%
+  &::after
+    bottom: 0
+
+    
