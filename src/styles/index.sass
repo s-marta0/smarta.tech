@@ -1,11 +1,20 @@
 @import '~bootstrap/scss/bootstrap.scss'
 
 
+@font-face
+  font-family: 'Podpisi'
+  src: url('./fonts/Podpisi.ttf') format('truetype')
+
+@font-face
+  font-family: 'Zagolovki'
+  src: url('./fonts/Zagolovki.ttf') format('truetype')
+
+
 .desktop-only
   @include media-breakpoint-down(md)
     display: none
 .mobile-only
-  @include media-breakpoint-up(md)
+  @include media-breakpoint-up(lg)
     display: none
 
 .noselect
@@ -43,7 +52,7 @@ $dark: black
 $light: white
 
 *
-  font-family: Arial, Helvetica, sans-serif
+  font-family: 'Podpisi', Helvetica, sans-serif
   color: $light
   margin: 0
   padding: 0
@@ -67,16 +76,53 @@ body
   height: rem(70)
   min-height: rem(70)
   border-bottom: 1px solid $light
+  margin-bottom: rem(50)
   @extend .d-flex
   @extend .flex-row
   @extend .align-items-center
-  @extend .justify-content-around
+  @extend .justify-content-md-around
+  @extend .justify-content-between
+  &__logo
+    height: rem(42) 
+    width: auto
+  &__links
+    @extend .d-flex
+    @extend .flex-grow-1
+    @extend .flex-md-row
+    @extend .flex-column
+    @extend .align-items-md-center
+    @extend .justify-content-around
+    // @extend .justify-content-md-end
+    // @extend .justify-content-start
+    @include media-breakpoint-down(md)
+      background-color: $dark
+      padding-right: rem(20)
+      position: fixed
+      top: rem(70)
+      right: 0
+      width: 100%
+      z-index: 200
+      .Link
+        margin-top: rem(10)
+        margin-bottom: rem(10)
+        text-align: right
+      &:not(&--opened)
+        display: none !important
+      &--opened
+  &__burger
+    @extend .mobile-only
+    width: rem(42)
+    height: rem(42)
+    background-image: url(./img/burger.svg)
+    @extend .def-img
+
+
 
 .Link
   text-decoration: underline
-  color: blue
+  color: #007bff
   &--active
-    color: $light
+    color: $light !important
 
 .content
   width: 100%
@@ -90,16 +136,19 @@ body
     margin-bottom: rem(70)
     &__video
       @extend .d-flex
-      @extend .flex-row
+      @extend .flex-md-row
+      @extend .flex-column
       @extend .align-items-center
       @extend .justify-content-around
       &__item
         @extend .flex-grow-1
         @extend .mx-3
     &__h1
+      font-family: 'Zagolovki', Helvetica, sans-serif
       position: relative
       z-index: 100
-      margin-top: rem(-50)
+      @include media-breakpoint-up(md)
+        margin-top: rem(-50)
       text-align: center
     &__description
       position: relative
@@ -111,6 +160,7 @@ body
   width: 100%
   padding-top: calc(100% / 1920 * 1080)
   position: relative
+  @extend .mt-2
   &__iframe
     @extend .abs-cover
     &::after
@@ -119,6 +169,7 @@ body
       opacity: 0
   &::before,
   &::after
+    @extend .desktop-only
     content: ''
     width: 100%
     height: 10%
