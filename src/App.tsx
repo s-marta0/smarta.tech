@@ -16,13 +16,20 @@ class App extends React.Component {
     <div className="App">
       <Router>
         <Header />
-        <Switch>
-          {routes.map(route =>
-            <Route path={route.link}>
-              {route.comp}
-            </Route>
-          )}
-        </Switch>
+        <div className="content">
+          <div className="container">
+            <Switch>
+              {routes.map(route =>
+                <Route
+                  path={route.link}
+                  exact={route.link === "/"}
+                >
+                  {route.comp}
+                </Route>
+              )}
+            </Switch>
+          </div>
+        </div>
       </Router>
     </div>
 }
