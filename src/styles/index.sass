@@ -1,0 +1,186 @@
+@import '~bootstrap/scss/bootstrap.scss'
+
+
+@font-face
+  font-family: 'Podpisi'
+  src: url('./fonts/Podpisi.ttf') format('truetype')
+
+@font-face
+  font-family: 'Zagolovki'
+  src: url('./fonts/Zagolovki.ttf') format('truetype')
+
+
+.desktop-only
+  @include media-breakpoint-down(md)
+    display: none
+.mobile-only
+  @include media-breakpoint-up(lg)
+    display: none
+
+.noselect
+  -webkit-touch-callout: none  /* iOS Safari */
+  -webkit-user-select: none    /* Safari */
+  -khtml-user-select: none     /* Konqueror HTML */
+  -moz-user-select: none       /* Firefox */
+  -ms-user-select: none        /* Internet Explorer/Edge */
+  user-select: none            /* Non-prefixed version, currently supported by Chrome and Opera */
+
+.abs-cover
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+
+.def-img
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+
+.button
+  padding: 0
+  cursor: pointer
+  outline: none
+  border: none
+  background-color: rgba(0, 0, 0, 0)
+
+@function rem($px)
+  @return calc(#{$px} / 16 * 1rem)
+
+// COLORS
+$dark: black
+$light: white
+
+*
+  font-family: 'Podpisi', Helvetica, sans-serif
+  color: $light
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+
+body
+  background-color: $dark
+
+.App
+  overflow: hidden
+  width: 100%
+  height: 100vh
+  font-size: rem(20)
+  @extend .d-flex
+  @extend .flex-column
+
+
+
+.Header
+  height: rem(70)
+  min-height: rem(70)
+  border-bottom: 1px solid $light
+  margin-bottom: rem(50)
+  @extend .d-flex
+  @extend .flex-row
+  @extend .align-items-center
+  @extend .justify-content-md-around
+  @extend .justify-content-between
+  &__logo
+    height: rem(42) 
+    width: auto
+  &__links
+    @extend .d-flex
+    @extend .flex-grow-1
+    @extend .flex-md-row
+    @extend .flex-column
+    @extend .align-items-md-center
+    @extend .justify-content-around
+    // @extend .justify-content-md-end
+    // @extend .justify-content-start
+    @include media-breakpoint-down(md)
+      background-color: $dark
+      padding-right: rem(20)
+      position: fixed
+      top: rem(70)
+      right: 0
+      width: 100%
+      z-index: 200
+      .Link
+        margin-top: rem(10)
+        margin-bottom: rem(10)
+        text-align: right
+      &:not(&--opened)
+        display: none !important
+      &--opened
+  &__burger
+    @extend .mobile-only
+    width: rem(42)
+    height: rem(42)
+    background-image: url(./img/burger.svg)
+    @extend .def-img
+
+
+
+.Link
+  text-decoration: underline
+  color: #007bff
+  &--active
+    color: $light !important
+
+.content
+  width: 100%
+  @extend .flex-grow-1
+  overflow-x: hidden
+  overflow-y: scroll
+
+
+.Layout
+  &__project
+    margin-bottom: rem(70)
+    &__video
+      @extend .d-flex
+      @extend .flex-md-row
+      @extend .flex-column
+      @extend .align-items-center
+      @extend .justify-content-around
+      &__item
+        @extend .flex-grow-1
+        @extend .mx-3
+    &__h1
+      font-family: 'Zagolovki', Helvetica, sans-serif
+      position: relative
+      z-index: 100
+      @include media-breakpoint-up(md)
+        margin-top: rem(-50)
+      text-align: center
+    &__description
+      position: relative
+      z-index: 100
+      text-align: center
+
+
+.video
+  width: 100%
+  padding-top: calc(100% / 1920 * 1080)
+  position: relative
+  @extend .mt-2
+  &__iframe
+    @extend .abs-cover
+    &::after
+      content: ''
+      @extend .abs-cover
+      opacity: 0
+  &::before,
+  &::after
+    @extend .desktop-only
+    content: ''
+    width: 100%
+    height: 10%
+    background-color: $dark
+    position: absolute
+    z-index: 10
+    left: 0
+  &::before
+    top: 0
+    height: 14%
+  &::after
+    bottom: 0
+
+    
