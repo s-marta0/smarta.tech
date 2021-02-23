@@ -2,9 +2,9 @@ import React from 'react'
 
 
 type Props = {
-  autoplay: boolean;
+  autoplay?: boolean;
   src: string;
-  className: string;
+  className?: string;
 }
 
 type State = {

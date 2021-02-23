@@ -1,6 +1,6 @@
 type Block = {
   link: string;
-  autoplay: boolean;
+  autoplay?: boolean;
 }
 type Project = {
   title: string;

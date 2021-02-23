@@ -7,7 +7,7 @@ const data: Project[] = [
     description: "printemps 2020",
     blocks: [
       {
-        link: "https://youtu.be/F69Y9cdugAI",
+        link: "https://sun9-11.userapi.com/impf/J5MbH-2MZOxSZ9uexwicmmiyEWGu2EDDhrqFrg/VHam0gcOYqo.jpg?size=1528x2160&quality=96&proxy=1&sign=b6434b35835b3ae9f7726d070ba7672b&type=album",
         autoplay: true,
       },
 

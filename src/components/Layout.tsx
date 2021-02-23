@@ -1,8 +1,7 @@
 import React, { FunctionComponent } from 'react'
 
-import Video from '../components/Video'
+import Media from '../components/Media'
 import { Project } from '../types'
-import getVideoId from '../utils/getVideoId'
 
 
 type Props = {
@@ -16,11 +15,12 @@ const Header: FunctionComponent<Props> = ({ projects }) =>
       <div className="Layout__project">
         <div className="Layout__project__video">
           {project.blocks.map(block =>
-            <Video
-              className="Layout__project__video__item"
-              src={getVideoId(block.link)}
-              autoplay={block.autoplay}
-            />
+            <div className="Layout__project__video__item">
+              <Media
+                src={block.link}
+                autoplay={block.autoplay}
+              />
+            </div>
           )}
         </div>
         <h1 className="Layout__project__h1">
