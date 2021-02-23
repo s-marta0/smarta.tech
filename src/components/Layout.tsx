@@ -19,6 +19,7 @@ const Header: FunctionComponent<Props> = ({ projects }) =>
               <Media
                 src={block.link}
                 autoplay={block.autoplay}
+                mobile={block.mobile}
               />
             </div>
           )}

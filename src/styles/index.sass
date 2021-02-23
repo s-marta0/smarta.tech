@@ -142,6 +142,7 @@ body
       @extend .align-items-center
       @extend .justify-content-around
       &__item
+        width: 100%
         @extend .flex-grow-1
         @extend .mx-3
     &__h1
@@ -151,10 +152,14 @@ body
       @include media-breakpoint-up(md)
         margin-top: rem(-50)
       text-align: center
+      @include media-breakpoint-down(lg)
+        font-size: rem(22)
     &__description
       position: relative
       z-index: 100
       text-align: center
+      @include media-breakpoint-down(lg)
+        font-size: rem(16)
 
 
 .video
