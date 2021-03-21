@@ -142,7 +142,7 @@ const data: Project[] = [
     description: "automne 2019",
     blocks: [
       {
-        link: "https://www.youtube.com/watch?v=YO2wMTL4SAc",
+        link: "https://www.youtube.com/watch?v=CjZSizTkXqk",
         autoplay: true,
         mobile: "https://media.giphy.com/media/BSw4dF2by71oaEb7FI/giphy.gif"
       },

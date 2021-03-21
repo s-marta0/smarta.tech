@@ -1,7 +1,7 @@
 {
   "homepage": "https://smarta.tech/",
-  "name": "portfolio",
-  "version": "0.1.0",
+  "name": "smarta.tech",
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -27,7 +27,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "yarn run build && echo 'sigr.online' > ./build/CNAME && gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
