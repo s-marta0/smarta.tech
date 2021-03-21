@@ -3,126 +3,128 @@ import { Project } from '../types'
 
 const data: Project[] = [
   {
-    title: "CoronaRhytmus",
-    description: "printemps 2020",
+    title: "",
+    description: "",
     blocks: [
       {
-        link: "https://youtu.be/F69Y9cdugAI",
-        autoplay: true,
-        // mobile: "https://psv4.userapi.com/c538600/u63043058/docs/c7e67fb5a07a/5.jpg?extra=_3AAjYufIzs-eRv7I6kX3kDCT5bX_5V_xRV9ds-Ml-UT6OlqyOHfPPbqT4P2FOoIFE3S9QlYxI_YxavQWz3SJ--RunosOpBnWB8_YoL_6-nFYU7BBJKJRo-403Ks6gFKW39OKJnJI7dNyO6MyFN_Nw"
-        mobile: "https://media.giphy.com/media/5z3TWlFerNgrPgx1mH/giphy.gif"
-      },
-
-    ],
-  },
-  {
-    title: "#BullRun2021 NFT Cryptoart collection",
-    description: "hiver 2021",
-    blocks: [
-      {
-        link: "https://youtu.be/02tdnN6M6cI",
-        autoplay: true,
-      },
-      {
-        link: "https://youtu.be/L93qbj61zPg",
-        autoplay: true,
-      },
-      {
-        link: "https://youtu.be/5W2C_pPNZaQ",
-        autoplay: true,
-      },
-    ],
-  },
-  {
-    title: "Self isolation ⛓🖤 Introspection🕳",
-    description: "printemps 2020",
-    blocks: [
-      {
-        link: "https://www.youtube.com/watch?v=R-gpe9G6ZUI",
-        autoplay: true,
-      },
-      {
-        link: "https://www.youtube.com/watch?v=py5K3ZjmASU",
-        autoplay: true,
-      },
-      {
-        link: "https://www.youtube.com/watch?v=pkN7i85rV4g",
-        autoplay: true,
-      },
-    ],
-  },
-  {
-    title: "#Rassvet",
-    description: "logo creation & animation Digital Assets & Art Fund #Rassvet. hiver 2021",
-    blocks: [
-      {
-        link: " https://youtu.be/dmlUQXkQ5J4",
+        link: "https://storage.yandexcloud.net/cdn.tochkadostupa.spb.ru/the_sociophobic/smarta.tech/new%20media%20art/1.jpg",
         autoplay: false,
       },
 
     ],
   },
   {
-    title: "11.d",
-    description: "logo animation pour marque des vêtements",
+    title: "Human design new era (2020-2021)",
+    description: "Human design new era — c’est une exposition virtuelle interactive. Ce projet a été réalisé dans UNITY Mes animations répresentent les objets exposés dans le foret. Sur le site-web il y a la description complete Human design new era",
     blocks: [
       {
-        link: "https://youtu.be/9Aa--gTAKeM",
-        autoplay: true,
+        link: "https://youtu.be/UvlHIiF-hJQ",
+        autoplay: false,
       },
+    ],
+  },
+  {
+    title: "",
+    description: "",
+    blocks: [
       {
-        link: "https://youtu.be/frf83HiRU_s",
-        autoplay: true,
+        link: "https://storage.yandexcloud.net/cdn.tochkadostupa.spb.ru/the_sociophobic/smarta.tech/new%20media%20art/2.jpg",
+        autoplay: false,
       },
+  
+    ],
+  },
+  {
+    title: "Halo",
+    description: "hiver 2021, performance audiovisuelle. Alexander Kozlov, Marta Shilova, Svetlana Budikina. La nouvelle scène du Théâtre Alexandrinsky dans le cadre du concert dédié au 5e anniversaire du Laboratoire des Nouveaux Médias. Créez des graphiques audio réactifs inspirés du phénomène optique naturel: le halo. ",
+    blocks: [
       {
-        link: "https://youtu.be/LARp-BHzr7c",
-        autoplay: true,
+        link: "https://youtu.be/6QGWGLdYMiQ",
+        autoplay: false,
+      },
+
+    ],
+  },
+  {
+    title: "",
+    description: "",
+    blocks: [
+      {
+        link: "https://storage.yandexcloud.net/cdn.tochkadostupa.spb.ru/the_sociophobic/smarta.tech/new%20media%20art/3.jpg",
+        autoplay: false,
+      },
+  
+    ],
+  },
+  {
+    title: "VR Fractal Gallery",
+    description: "printemps 2020",
+    blocks: [
+      {
+        link: "https://youtu.be/GWq2IeNa9ro",
+        autoplay: false,
+      },
+    ],
+  },
+  {
+    title: "",
+    description: "",
+    blocks: [
+      {
+        link: "https://storage.yandexcloud.net/cdn.tochkadostupa.spb.ru/the_sociophobic/smarta.tech/new%20media%20art/4.jpg",
+        autoplay: false,
+      },
+  
+    ],
+  },
+  {
+    title: "Géométrie fractale. Recherches",
+    description: "2019-2020",
+    blocks: [
+      {
+        link: "https://psv4.userapi.com/c520036/u63043058/docs/d44/881107ec811c/Snimok_ekrana_2021-03-09_v_19_31_06.png?extra=WCQ0wY33ZXmlTiNvrrKpwDsPtGxpLODEqEBAWJ-9QA3I-sfUE1OkWwL1Zez_-CNrBdAnYnUUk-YwCamv-gXcbkkrBas5EMipDeJ1x9f4Us0HY7YgGH5En7dmI4YgDNr8aEBewgfZipgnO3B-wNZ0AWR_",
+        autoplay: false,
+      },
+    ],
+  },
+  {
+    title: "",
+    description: "",
+    blocks: [
+      {
+        link: "https://storage.yandexcloud.net/cdn.tochkadostupa.spb.ru/the_sociophobic/smarta.tech/new%20media%20art/5.jpg",
+        autoplay: false,
+      },
+  
+    ],
+  },
+  {
+    title: "SHAKTI (2020)",
+    description: "Installation audio réactive. Fait dans Touchdesigner. Programmation visuelle. Graphiques génératifs",
+    blocks: [
+      {
+        link: "https://youtu.be/IhgdIQUfjks",
+        autoplay: false,
       },
     ]
   },
   {
-    title: "TrainFeel visualising",
-    description: "été 2020",
+    title: "",
+    description: "",
     blocks: [
       {
-        link: "https://www.youtube.com/watch?v=ljzm4yCfvs4",
-        autoplay: true,
+        link: "https://storage.yandexcloud.net/cdn.tochkadostupa.spb.ru/the_sociophobic/smarta.tech/new%20media%20art/6.jpg",
+        autoplay: false,
       },
-
+      {
+        link: "https://storage.yandexcloud.net/cdn.tochkadostupa.spb.ru/the_sociophobic/smarta.tech/new%20media%20art/7.jpg",
+        autoplay: false,
+      },  
     ],
   },
   {
-    title: "Mandelbrot fractal floating",
-    description: "été 2020",
-    blocks: [
-      {
-        link: "https://www.youtube.com/watch?v=L4HTShP16iI",
-        autoplay: true,
-      },
-
-    ],
-  },
-  {
-    title: "HumanDesign",
-    description: "automne 2019",
-    blocks: [
-      {
-        link: "https://www.youtube.com/watch?v=YO2wMTL4SAc",
-        autoplay: true,
-      },
-      {
-        link: "https://www.youtube.com/watch?v=faow_zaMD4Y",
-        autoplay: true,
-      },
-      {
-        link: "https://www.youtube.com/watch?v=UisWdaaRkuM&t=3s",
-        autoplay: true,
-      },
-    ],
-  },
-  {
-    title: "Liquid chess création & animation",
-    description: "printemps 2019",
+    title: "Jeu d’échecs. forme+visualisation (2018-2019)",
+    description: "",
     blocks: [
       {
         link: "https://www.youtube.com/watch?v=qyiGFyeaY_k",
@@ -135,34 +137,6 @@ const data: Project[] = [
 
     ],
   },
-  {
-    title: "Mantra font development, poster animation",
-    description: "printemps 2020",
-    blocks: [
-      {
-        link: "https://youtu.be/zdoDvcr7BtA",
-        autoplay: true,
-      },
-      {
-        link: "https://youtu.be/_dLRvB74Hxw",
-        autoplay: true,
-      },
-      {
-        link: "https://youtu.be/dcBBUG1VNxI",
-        autoplay: true,
-      },
-    ],
-  },
-  {
-    title: "",
-    description: "",
-    blocks: [
-      {
-        link: "https://www.youtube.com/watch?v=kNV0_WZcso0",
-        autoplay: true,
-      },
-    ],
-  }
 ]
 
 

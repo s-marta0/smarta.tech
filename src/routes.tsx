@@ -17,24 +17,24 @@ type Route = {
 
 const routes: Route[] = [
   {
-    label: "New Media Art",
-    link: "/",
-    comp: <MediaArt />
-  },
-  {
-    label: "Classic Art",
-    link: "/classic",
-    comp: <ClassicArt />
-  },
-  {
     label: "Motion Design",
-    link: "/motion",
+    link: "/",
     comp: <MotionDesign />
+  },
+  {
+    label: "New Media Art",
+    link: "/new",
+    comp: <MediaArt />
   },
   {
     label: "Graphic Design",
     link: "/graphic",
     comp: <GraphicDesign />
+  },
+  {
+    label: "Classic Art",
+    link: "/classic",
+    comp: <ClassicArt />
   },
   {
     label: "Photography",

@@ -1,12 +1,13 @@
 type Block = {
-  link: string;
-  autoplay?: boolean;
-  mobile?: string;
+  link?: string | undefined
+  autoplay?: boolean | undefined
+  mobile?: string | undefined
+  description?: string | undefined
 }
 type Project = {
-  title: string;
-  description: string;
-  blocks: Block[];
+  title: string | undefined
+  description: string | undefined
+  blocks: Block[]
 }
 
 

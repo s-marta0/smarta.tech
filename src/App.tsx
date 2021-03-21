@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom"
@@ -21,6 +21,7 @@ class App extends React.Component {
             <Switch>
               {routes.map(route =>
                 <Route
+                  key={route.link}
                   path={route.link}
                   exact={route.link === "/"}
                 >

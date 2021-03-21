@@ -3,8 +3,8 @@ import { Project } from '../types'
 
 const data: Project[] = [
   {
-    title: "CoronaRhytmus",
-    description: "printemps 2020",
+    title: "Livre Géométrie fractale",
+    description: "En 2019 ma passion des fractales a commencé. J’ai composé un livre de 80 pages. J’ai lu beaucoup d’articles et composé ce livre à partir d’eux. En 2020 je l’ai amélioré et traduit en franÇais.",
     blocks: [
       {
         link: "https://youtu.be/F69Y9cdugAI",
