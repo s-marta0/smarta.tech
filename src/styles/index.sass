@@ -168,11 +168,11 @@ body
 
 .video
   width: 100%
-  padding-top: calc(100% / 1920 * 1080)
   position: relative
   @extend .mt-2
   &__iframe
     @extend .abs-cover
+    height: calc(100% / 1920 * 1080)
     &::after
       content: ''
       @extend .abs-cover
