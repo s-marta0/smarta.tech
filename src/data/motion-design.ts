@@ -73,9 +73,9 @@ const data: Project[] = [
     description: "logo creation & animation Digital Assets & Art Fund #Rassvet. hiver 2021",
     blocks: [
       {
-        link: "https://youtube.com/watch?v=dmlUQXkQ5J4",
+        link: "https://www.youtube.com/watch?v=dmlUQXkQ5J4",
         autoplay: false,
-        mobile: "https://youtube.com/watch?v=dmlUQXkQ5J4"
+        mobile: "https://www.youtube.com/watch?v=dmlUQXkQ5J4"
       },
 
     ],
