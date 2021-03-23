@@ -28,7 +28,7 @@ const routes: Route[] = [
   },
   {
     label: "Graphic Design",
-    link: "/graphic",
+    link: "/graphics",
     comp: <GraphicDesign />
   },
   {
