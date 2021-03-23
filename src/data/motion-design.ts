@@ -42,7 +42,6 @@ const data: Project[] = [
       {
         link: "https://youtu.be/ku9UlaaiZ40",
         autoplay: false,
-        mobile: "https://youtu.be/ku9UlaaiZ40"
       },
 
     ],
@@ -75,7 +74,6 @@ const data: Project[] = [
       {
         link: "https://www.youtube.com/watch?v=dmlUQXkQ5J4",
         autoplay: false,
-        mobile: "https://www.youtube.com/watch?v=dmlUQXkQ5J4"
       },
 
     ],
@@ -108,7 +106,6 @@ const data: Project[] = [
       {
         link: "https://youtu.be/8l2NWwG5VJQ",
         autoplay: false,
-        mobile: "https://youtu.be/8l2NWwG5VJQ"
       },
 
     ],
