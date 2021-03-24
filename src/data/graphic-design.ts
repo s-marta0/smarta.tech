@@ -18,7 +18,7 @@ const data: Project[] = [
     description: "",
     blocks: [
       {
-        link: "https://1.downloader.disk.yandex.ru/preview/5d3469983020016b6f15c5be701689fdadcb4e0debd088c23e0121cab3188768/inf/WSR0uZusXMy4BptleIrxUPmc1JUro3tAn2x_FixVZqPtT7_SmtYExNbNp73EHOkn8mbrxmlGoX4-t9WZOYRY3w%3D%3D?uid=305797124&filename=%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-03-09%20%D0%B2%2019.36.25.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=305797124&tknv=v2&size=2158x1554",
+        link: "https://downloader.disk.yandex.ru/preview/d1001bee8573a602934fde6bd96b9a211d402b8e4df00e30ae054f5532dd70ca/605bc279/WSR0uZusXMy4BptleIrxUPmc1JUro3tAn2x_FixVZqPtT7_SmtYExNbNp73EHOkn8mbrxmlGoX4-t9WZOYRY3w%3D%3D?uid=0&filename=Снимок%20экрана%202021-03-09%20в%2019.36.25.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=2048x2048",
         autoplay: true,
       },
 
@@ -40,7 +40,7 @@ const data: Project[] = [
     description: "",
     blocks: [
       {
-        link: "https://1.downloader.disk.yandex.ru/preview/f855f9bd9b2a3a4022721d13d67e6e6122cd82d5d4769908f576a75a9912d3d9/inf/FKMsxmjoZYPXFQuOOslnYC5-Bim0U3G_5ivPFeA4-ca7p6i5NHvEPGMXsNpCYCzhSd7rKS7_O85snxM3qSYvtg%3D%3D?uid=305797124&filename=%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-03-22%20%D0%B2%2014.30.33.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=305797124&tknv=v2&size=2880x1642",
+        link: "https://s239vla.storage.yandex.net/rdisk/f613177816adb1f7a3c8e8f15062a1eff8d3a88d7351cbd749d46500fbcb9b00/605bc2e0/fO_KPpqRWYU4vx1mvyoUjSkgS5xtg8-Kw-xJqdaRgKWTQepWzA0AfFZ2Ryw-swCGMuiJuP6K_bCqNdjuEa_AAw==?uid=0&filename=%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-03-22%20%D0%B2%2014.30.33.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&fsize=151950&hid=4768eeda6d3d9c021a6b01db213c5cc5&media_type=image&tknv=v2&etag=07b6e8bdeb383501c94a8c2bb6011581&rtoken=ITbTqD6JArxj&force_default=no&ycrid=na-2bec739c6d7fda3a32811a21ca92541e-downloader20h&ts=5be502a4e7800&s=138adfc2b3ca68df3fe482b762da14bc13345d90c1c12f069af1b8e35d32c677&pb=U2FsdGVkX1-UYFIawtqTANaGYPeaKvhNu6ktnAUqsiyeQpsquE5n3AHcl89_eFJazjwOs1W_Wt-OuwWjJu53YxnbXeM33WWdIso22F-5GMA",
         autoplay: true,
       },
 
