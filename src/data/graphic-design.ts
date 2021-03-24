@@ -7,7 +7,7 @@ const data: Project[] = [
     description: "En 2019 ma passion des fractales a commencé. J’ai composé un livre de 80 pages. J’ai lu beaucoup d’articles et composé ce livre à partir d’eux. En 2020 je l’ai amélioré et traduit en franÇais.",
     blocks: [
       {
-        link: "https://youtu.be/F69Y9cdugAI",
+        link: "https://1.downloader.disk.yandex.ru/preview/5d3469983020016b6f15c5be701689fdadcb4e0debd088c23e0121cab3188768/inf/WSR0uZusXMy4BptleIrxUPmc1JUro3tAn2x_FixVZqPtT7_SmtYExNbNp73EHOkn8mbrxmlGoX4-t9WZOYRY3w%3D%3D?uid=305797124&filename=%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-03-09%20%D0%B2%2019.36.25.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=305797124&tknv=v2&size=2158x1554",
         autoplay: true,
       },
 
