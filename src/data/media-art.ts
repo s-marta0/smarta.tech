@@ -82,7 +82,7 @@ const data: Project[] = [
     description: "2019-2020",
     blocks: [
       {
-        link: "https://psv4.userapi.com/c520036/u63043058/docs/d44/881107ec811c/Snimok_ekrana_2021-03-09_v_19_31_06.png?extra=WCQ0wY33ZXmlTiNvrrKpwDsPtGxpLODEqEBAWJ-9QA3I-sfUE1OkWwL1Zez_-CNrBdAnYnUUk-YwCamv-gXcbkkrBas5EMipDeJ1x9f4Us0HY7YgGH5En7dmI4YgDNr8aEBewgfZipgnO3B-wNZ0AWR_",
+        link: "",
         autoplay: false,
       },
     ],
