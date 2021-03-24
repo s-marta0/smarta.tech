@@ -368,8 +368,8 @@ const data: Project[] = [
 
     ],
   },  {
-    title: "",
-    description: "",
+    title: "Book des recherches de police Ubuntu",
+    description: "2019",
     blocks: [
       {
         link: "",
@@ -382,14 +382,14 @@ const data: Project[] = [
     description: "",
     blocks: [
       {
-        link: "",
+        link: "https://1.downloader.disk.yandex.ru/preview/af78898eb569608d1c421b73ce49993cdc068545b1b717025bf48520c8a0083b/inf/XfxAauM87N3moo9sJ9S8K5U2WNxqY8enhaNZN04y2R1suAsSs_V85H1vnXRRXqmF89Tf16cOj6E0j0WU7Dm8pQ%3D%3D?uid=305797124&filename=%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-03-23%20%D0%B2%2017.28.36.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=305797124&tknv=v2&size=2158x1554",
         autoplay: true,
       },
 
     ],
   },  {
-    title: "",
-    description: "",
+    title: "Journal P10",
+    description: "2019",
     blocks: [
       {
         link: "",
@@ -402,14 +402,52 @@ const data: Project[] = [
     description: "",
     blocks: [
       {
+        link: "https://4.downloader.disk.yandex.ru/preview/3e3b67eba247377b0b8efd9e876325bf151f5b6edd424b12908f70533c46ac1d/inf/wgW3_-smU2Hv71D9Rcnfpq63mtCIJ2SAbQ-_QxUowJmE1AVNE1veL-fVJ-qur0tiozT3cDOsKNwYDTHCZKxPLw%3D%3D?uid=305797124&filename=%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-03-23%20%D0%B2%2017.30.08.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=305797124&tknv=v2&size=2158x1554",
+        autoplay: true,
+      },
+
+    ],
+  },
+  {
+    title: "Affiche sociale",
+    description: "2020",
+    blocks: [
+      {
         link: "",
         autoplay: true,
       },
 
     ],
-  },  {
+  },
+  {
     title: "",
     description: "",
+    blocks: [
+      {
+        link: "https://3.downloader.disk.yandex.ru/preview/9dbac3ac219cc752ba7ea96d385561f3b1534c125970afd720dba14487880fbf/inf/8CjHL1u3CR7J-twa2SaADGTyY6SsXIKiBRjPtJm4t9vi9dFpgL0Ii03z9EHsTz5GWOKz05JTAbjssGHER6Ye8A%3D%3D?uid=305797124&filename=chor.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=305797124&tknv=v2&size=2646x1306",
+        autoplay: true,
+        mobile: "https://3.downloader.disk.yandex.ru/preview/9dbac3ac219cc752ba7ea96d385561f3b1534c125970afd720dba14487880fbf/inf/8CjHL1u3CR7J-twa2SaADGTyY6SsXIKiBRjPtJm4t9vi9dFpgL0Ii03z9EHsTz5GWOKz05JTAbjssGHER6Ye8A%3D%3D?uid=305797124&filename=chor.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=305797124&tknv=v2&size=2646x1306"
+      },
+      {
+        link: "https://4.downloader.disk.yandex.ru/preview/c72952cd3e302d271ec1840b9231c14f6a726d7f6714a81c1eaa776b786f559c/inf/Hp3mrF_Usbs_WwjT1ca2QkyPqZCqifP0MLON3TvOBWcqFksPN8seEM9XnGxZzT9-tqfknxR5ic-qo_ctQrIvpA%3D%3D?uid=305797124&filename=shum.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=305797124&tknv=v2&size=2158x1554",
+        autoplay: true,
+        mobile: "https://4.downloader.disk.yandex.ru/preview/c72952cd3e302d271ec1840b9231c14f6a726d7f6714a81c1eaa776b786f559c/inf/Hp3mrF_Usbs_WwjT1ca2QkyPqZCqifP0MLON3TvOBWcqFksPN8seEM9XnGxZzT9-tqfknxR5ic-qo_ctQrIvpA%3D%3D?uid=305797124&filename=shum.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=305797124&tknv=v2&size=2158x1554"
+      },
+      {
+        link: "https://media.giphy.com/media/A5raEGS8MgtfSWYxAe/giphy.gif",
+        autoplay: true,
+        mobile: "https://media.giphy.com/media/A5raEGS8MgtfSWYxAe/giphy.gif"
+      },
+      {
+        link: "https://3.downloader.disk.yandex.ru/preview/9dbac3ac219cc752ba7ea96d385561f3b1534c125970afd720dba14487880fbf/inf/8CjHL1u3CR7J-twa2SaADGTyY6SsXIKiBRjPtJm4t9vi9dFpgL0Ii03z9EHsTz5GWOKz05JTAbjssGHER6Ye8A%3D%3D?uid=305797124&filename=chor.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=305797124&tknv=v2&size=2646x1306",
+        autoplay: true,
+        mobile: "https://3.downloader.disk.yandex.ru/preview/9dbac3ac219cc752ba7ea96d385561f3b1534c125970afd720dba14487880fbf/inf/8CjHL1u3CR7J-twa2SaADGTyY6SsXIKiBRjPtJm4t9vi9dFpgL0Ii03z9EHsTz5GWOKz05JTAbjssGHER6Ye8A%3D%3D?uid=305797124&filename=chor.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=305797124&tknv=v2&size=2646x1306"
+      },
+    ],
+  },
+    {
+    title: "Illustrations et conception de livre Hydrospace",
+    description: "2019",
     blocks: [
       {
         link: "",
@@ -422,7 +460,7 @@ const data: Project[] = [
     description: "",
     blocks: [
       {
-        link: "",
+        link: "https://4.downloader.disk.yandex.ru/preview/1add5821fdba2e4ebf949322fc0475393775011a105013cfe5afb82e84028374/inf/v23nk8edKUBn4tWqjU7wRz5fadDrueiPJDC5tIihF7SDjIzFI-1a7zuYYgEpJ6uMkBkoDftw2DdOSAfF8MR2DA%3D%3D?uid=305797124&filename=hydro1.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=305797124&tknv=v2&size=2158x1554",
         autoplay: true,
       },
 
@@ -432,7 +470,48 @@ const data: Project[] = [
     description: "",
     blocks: [
       {
+        link: "https://1.downloader.disk.yandex.ru/preview/23a49b6eba7d40285eae77866b6dc18cae9ef31fefc766c61d678269f03dde78/inf/snXn2AwFkQKvMK_uGjZ7xz5fadDrueiPJDC5tIihF7SednMY1l4rOJ0s6498IgNyZV2AF_eA7TtRGF5xatoeyQ%3D%3D?uid=305797124&filename=hydro2.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=305797124&tknv=v2&size=2158x1554",
+        autoplay: true,
+      },
+
+    ],
+  },
+  {
+    title: "Les illustrations pour le magazine Forbes Life",
+    description: "2019",
+    blocks: [
+      {
         link: "",
+        autoplay: true,
+      },
+
+    ],
+  },{
+    title: "",
+    description: "",
+    blocks: [
+      {
+        link: "https://4.downloader.disk.yandex.ru/preview/131158fa2aaee4450317861200c686a7597407e2441d98627855a19bc3260ed3/inf/Xxn1GCM8BZfbMjqCRpUUDVs9iTk8BUznj81qCJaGzeHZdOfqQheL5-MN-c3lF7jpjVbZngowsgCd15VfwcZlfQ%3D%3D?uid=305797124&filename=forbs.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=305797124&tknv=v2&size=2646x1306",
+        autoplay: true,
+      },
+
+    ],
+  },{
+    title: "Illustrations pour le site www.theplugame.com",
+    description: "",
+    blocks: [
+      {
+        link: "",
+        autoplay: true,
+      },
+
+    ],
+  },{
+    title: "",
+    description: "",
+    blocks: [
+      {
+        link: "https://4.downloader.disk.yandex.ru/preview/08210a7e0b65463795489f47296215f2459eef4330561a5d1e12796efcec3aff/inf/-nJ7kNxGPC8WSOqR40AMkq63mtCIJ2SAbQ-_QxUowJlzkwsANoLNNJCgNqLG7dPl9AH1NiJJZbfJB1R9naGPSw%3D%3D?uid=305797124&filename=%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-03-23%20%D0%B2%2017.36.40.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=305797124&tknv=v2&size=2646x1306",
         autoplay: true,
       },
 
