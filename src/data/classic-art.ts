@@ -134,7 +134,7 @@ const data: Project[] = [
     ],
   },    
   {
-    title: "Daria",
+    title: "Daria!",
     description: "",
     blocks: [
       {
