@@ -18,7 +18,7 @@ const data: Project[] = [
     description: "",
     blocks: [
       {
-        link: "https://downloader.disk.yandex.ru/preview/d1001bee8573a602934fde6bd96b9a211d402b8e4df00e30ae054f5532dd70ca/605bc279/WSR0uZusXMy4BptleIrxUPmc1JUro3tAn2x_FixVZqPtT7_SmtYExNbNp73EHOkn8mbrxmlGoX4-t9WZOYRY3w%3D%3D?uid=0&filename=Снимок%20экрана%202021-03-09%20в%2019.36.25.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=2048x2048",
+        link: "https://lh3.googleusercontent.com/bQuF09cGwPaOEpGMZECzMsbyQNtRDoh1_sAEAtOOdgtKmh0eG1mGfnHblSOW-bRFeRu7bZ3enxIhHRRu-OZ8WJRUrlrSpWotJxRfST1Usl_VVzHsUs0gL3Y-HDxLbT-eoNEABgyj1uHx8gNGux7FVX030v0ZxVS_7VsEpU2dNSB4ZEdqNgZh8mol0QsNi7Wz_5SoIbkkhrGnzN8CoJXKeP2WxI-El3bbP4_ZVHD54hd91JFb_zYBLtzPc0ciqcwmM8TMUCICSDVcH3n-YKJukEGdE1Y-utoL7qlU-Vbs_ppoQerlnLXHuKj7u4tU-0x6ERRyor2NDCrNK_YPrnK6oAM3eajDIHvlFGRihEszEjGag-eWv9DvQYGe9klsQAqKqjiBzsHKeuv-1EO8GmOmkRRav6y1FhMIDRGv5YSi9HZ3xroKQoqC-H2zyu7UrD5jNPUK9AacarNRX8pODJmrVD6D0lxxYe4NDnTibMWFv1vjqOsr1SRfrl99-yWPKwPYpicZOVFFQ34aR0_INGPHRUQRV60EQL9QlrxYeqg8CKxXv-CJV3Rirk5AQQAyFpV9t-YiPZQLipxXUTc8FdCvDxno2jRUlPAvZZS67v__WlDs7q9drlms1u-T5HO4FR13QIiw-ny4QKCaK0ojtrI1vt-u8BVoSP4bm_CgwCNYkeMnAOV6TDt9JuWHmY4VilFZrwcXi__aq2jvcB8YlUt1ZU4IEw=w2156-h1162-no?authuser=0",
         autoplay: true,
       },
 
@@ -40,7 +40,7 @@ const data: Project[] = [
     description: "",
     blocks: [
       {
-        link: "https://s239vla.storage.yandex.net/rdisk/f613177816adb1f7a3c8e8f15062a1eff8d3a88d7351cbd749d46500fbcb9b00/605bc2e0/fO_KPpqRWYU4vx1mvyoUjSkgS5xtg8-Kw-xJqdaRgKWTQepWzA0AfFZ2Ryw-swCGMuiJuP6K_bCqNdjuEa_AAw==?uid=0&filename=%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-03-22%20%D0%B2%2014.30.33.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&fsize=151950&hid=4768eeda6d3d9c021a6b01db213c5cc5&media_type=image&tknv=v2&etag=07b6e8bdeb383501c94a8c2bb6011581&rtoken=ITbTqD6JArxj&force_default=no&ycrid=na-2bec739c6d7fda3a32811a21ca92541e-downloader20h&ts=5be502a4e7800&s=138adfc2b3ca68df3fe482b762da14bc13345d90c1c12f069af1b8e35d32c677&pb=U2FsdGVkX1-UYFIawtqTANaGYPeaKvhNu6ktnAUqsiyeQpsquE5n3AHcl89_eFJazjwOs1W_Wt-OuwWjJu53YxnbXeM33WWdIso22F-5GMA",
+        link: "https://lh3.googleusercontent.com/Ok4zL_8QA-LWK0CdiqYlIEVAMmXcwRi6ptrtRQ2lndJIGTFmpX0vsSLXqcwK3jU2EUmsgdYBCQWLIR_qK47nUilPG9XHoBfUD3OL3DbrmHJ9GnyHxsrcg6rxoyGg1QOX8757H0RZqKp85MMWEPd9XeUTvBwRQfyi2PyHayhe9AtDGnLWT85DctCqrldWAg8ySOwF62njKH37RvMTb8pHIPYCx54_EpwrCx0b9q9HWf0CCa69PDn47i3gwAouFwi5Pb82AdSIP0ubVC34L_OkzGgTuTisTayxQfi5mPwFfTk6cWaLGC3sRK9pLNZdmzqGeMImHyxQFQoICMCv4wsz1OL0ov_MxTXTqpgCh-TTtdXk4X2EkHZwtuU155V_aUMpygnS3Lz5BI-4G53s1zljqZy43bbxBsqodlvwzFgYvxhZveESy1OW8QDVLIY_u9ZGkGnhuwDv_edA9NNHVe-mg2jEEiC3yTUiGfjQE2Pepx7ZPlpBv0SOOJ0GL7U_8HF5CchPxxejC7HBgfwOUjUabYEkADIniqnGMcyPsxy5WT8xUkID5TTgCShKDN1VJINLAPYSA2WR0fHd7VPlfwmaiITeWu6KYqA0MrNURQfyoOicVWOf7qMJG1QpZXEjbgpM8CGJ_TPwDt6NLK44dVO4yVcUIdbH2MmMkLc-0xrBJMPrF6N2htDLVMHkCh1c_XGN93oopOn0YDpq4s197ZRqDWdcHw=w2106-h1492-no?authuser=0",
         autoplay: true,
       },
 
@@ -51,7 +51,7 @@ const data: Project[] = [
     description: "",
     blocks: [
       {
-        link: "https://1.downloader.disk.yandex.ru/preview/a48392b5762e68da8a464e6220776022b3d743f3fa674ee0878436286a6475bd/inf/73UsL3jyiGgccKYijULlcfmc1JUro3tAn2x_FixVZqMPlGNCFHW17mvRFuxucSNak6ZlrwcYibvJjHWrLe75UA%3D%3D?uid=305797124&filename=%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202021-03-22%20%D0%B2%2014.31.02.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=305797124&tknv=v2&size=2880x1642",
+        link: "https://lh3.googleusercontent.com/wSawebhFjfcBnNDNRkSd_nBaRLmR73QZQdBXV8yh1-fOs80HXyy_YsZdWljdZPEpF1xlDFyQXh868TtfQIBWn68K7J5ndnmC4KfC1cBkx4uJ-nfJxKLdd62wLE5aUGMKBM74g0HzxJOKpVOJF0_BxecBKgbYp0KH-daUJkU6Fm1e53jHsIQ3qjM4d2nK4qgFjX672ygZB8t7egezFprUcV7j71oQH8BE_9TJ2jYt4xYjoCHsf5ENwtF_ShypnoMPPH9sZNRho025KcseWvX-uygoPoe8BERXr4BLTcBxVFhYFndcqEJZvnQ52O1PdVhGAx2vLE-FGKSFnHoSLNATGIRxFDVGGVGHVUUjU8xSFHdI21txhKt8qYgmpkoqaqU54FKqsZpkHyQAmVOmbqxzXK6sBaUqB6XxJnCK6VWN9FPbwFHtgGocEc2o-zE2ceGeB2J4_sjklOPy2n0ifE6GGVtMyK4T3m1MjERjoFCcb9FEIQz0DKVpYfqBz5Hgs1868WmDeq-7i31y-V5ZXvAURNHx8E7gxIXpx2vGLIPtclyKYgVufMqtRNOjru5cYSp8C_VJv8ieoprScd8mFc5MLgIFsHKjrQIBT31wWKTTU_tEzB1hKpukNuvC2Jut4S8tqbdQKFVewz0qT6D6SFIb89yNybOg6klvJVr_5LTBs8q_MQ-H5yzGuJZx_xIXWXct56khvvOKFJ0APlzkM74cs_DGUA=w2106-h1158-no?authuser=0",
         autoplay: true,
       },
 
