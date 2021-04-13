@@ -15,7 +15,7 @@ const data: Project[] = [
   },
   {
     title: "Human design new era (2020-2021)",
-    description: "Human design new era — c’est une exposition virtuelle interactive. Ce projet a été réalisé dans UNITY Mes animations répresentent les objets exposés dans le foret. Sur le site-web il y a la description complete Human design new era",
+    description: "Human design new era — c’est une exposition virtuelle interactive. Ce projet a été réalisé dans UNITY Mes animations répresentent les objets exposés dans le foret. Sur le site-web il y a la description complete Human design new era - humandesignnewera.tilda.ws",
     blocks: [
       {
         link: "https://youtu.be/UvlHIiF-hJQ",

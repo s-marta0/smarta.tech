@@ -507,7 +507,7 @@ const data: Project[] = [
 
     ],
   },{
-    title: "Illustrations pour le site www.theplugame.com",
+    title: "Illustrations pour le site theplugame.com",
     description: "",
     blocks: [
       {

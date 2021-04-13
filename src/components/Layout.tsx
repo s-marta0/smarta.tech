@@ -39,7 +39,7 @@ const Header: FunctionComponent<Props> = ({ projects }) =>
         <Linkify>{project.title}</Linkify>
         </h1>
         <div className="Layout__project__description">
-          {project.description}
+        <Linkify>{project.description}</Linkify>
         </div>
       </div>
     )}
