@@ -22,7 +22,7 @@ const routes: Route[] = [
     comp: <MotionDesign />
   },
   {
-    label: "New Media Art",
+    label: "New Media",
     link: "/new",
     comp: <MediaArt />
   },
