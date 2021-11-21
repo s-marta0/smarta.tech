@@ -23,7 +23,7 @@ const routes: Route[] = [
   },
   {
     label: "New Media",
-    link: "/new",
+    link: "/media",
     comp: <MediaArt />
   },
   {
