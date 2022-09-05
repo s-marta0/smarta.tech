@@ -8,13 +8,13 @@ class Contacts extends React.Component<{}, {}> {
   render = () =>
     <div className="Contacts">
       <div className="row">
-        
+
         <div className="Contacts__name">
           Marta Shilova
         </div>
-
+        
         <div className="Contacts__links">
-
+        <div className="contact_text">Je m'appelle Marta, je suis visual & interaction designer. J'aime créer des projets a l'intersection du design, de la science et de l'art. Collaborer avec des spécialistes au niveau international</div>
           <ExternalLink newTab to="https://t.me/ssmarta" className="Contacts__links__item">
             Telegram
           </ExternalLink>

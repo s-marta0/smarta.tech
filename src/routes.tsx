@@ -22,8 +22,8 @@ const routes: Route[] = [
     comp: <MotionDesign />
   },
   {
-    label: "New Media Art",
-    link: "/new",
+    label: "New Media",
+    link: "/media",
     comp: <MediaArt />
   },
   {
@@ -31,16 +31,16 @@ const routes: Route[] = [
     link: "/graphics",
     comp: <GraphicDesign />
   },
-  {
-    label: "Classic Art",
-    link: "/classic",
-    comp: <ClassicArt />
-  },
-  {
-    label: "Photography",
-    link: "/photo",
-    comp: <Photography />
-  },
+  // {
+  //   label: "Classic Art",
+  //   link: "/classic",
+  //   comp: <ClassicArt />
+  // },
+  // {
+  //   label: "Photography",
+  //   link: "/photo",
+  //   comp: <Photography />
+  // },
   {
     label: "Contacts",
     link: "/contacts",

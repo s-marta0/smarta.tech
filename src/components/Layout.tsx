@@ -3,6 +3,7 @@ import React, { FunctionComponent } from 'react'
 import Video from '../components/Video_'
 import { Project } from '../types'
 import getVideoId from '../utils/getVideoId'
+import Linkify from 'react-linkify';
 
 
 
@@ -35,10 +36,10 @@ const Header: FunctionComponent<Props> = ({ projects }) =>
           )}
         </div>
         <h1 className="Layout__project__h1">
-          {project.title}
+        <Linkify>{project.title}</Linkify>
         </h1>
         <div className="Layout__project__description">
-          {project.description}
+        <Linkify>{project.description}</Linkify>
         </div>
       </div>
     )}
