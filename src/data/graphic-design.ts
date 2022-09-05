@@ -113,28 +113,6 @@ const data: Project[] = [
     ],
   },
   {
-    title: "Autocollants pour une entreprise de voyages SPBCITYGROUP",
-    description: "2017",
-    blocks: [
-      {
-        link: "",
-        autoplay: true,
-      },
-
-    ],
-  },
-  {
-    title: "",
-    description: "",
-    blocks: [
-      {
-        link: "https://lh3.googleusercontent.com/w4LvvDuwDJj1dtjEBxpQhp9OJCVt7LLrGjvMobT6-GtgxL8HrlwDjG0RLNL6U0pkOQIycnCQL5wX1AMws092aGtRPP9oEWjFTNChp_0a0g6tq2nHtBkrnxphf4XG2UVstxchF-xb7DkVHgfi6OphTjkszMqrfr1-D283zTXsj7-O-D3CY5d8TO5huA9hTkwfPh-8J0USAv2CEEQUf0oXswhxQDikwe5ZyZY9ive_uaNmn6VoqlSmw_NzyUXx-O_WPYFi7JvsCJ7NlVFc460R36V9RohNQ8yckUc1IMs2dJcCCFpAVdShgk_lCh5DpX-SzETe36fs1bWRErONtEg0rsHrZ53hmO-_GBcXZo7Ov1QKnDSKSoc6ajBGy7maH2bNw8BAvdESzEVkgqvLlmA-AeaqrnAG1SFfpcZDfR0sr61qfdLwj123r8kpn-kkUqWAjle7FqY7SptiJLDQsptODIFcb-cvljx0GS7XYQUqRscpdj5avMSawgao7yVVun-15tCO0OaZxA-jeZTNFQ0RMT7-1JnXc-DKfcINZQDMp5BJgXYa9ELASXQUYiL7v_8LOi6kMj-UXmkaXcbA95nySo7oK2diWqCF1_6SnWpsO_9UQcUOxguBloE-_pCG-DaBIkpm4FMHvaEn6V8yfRmmAizrrTthgMMIfsMTa6BASzwV1wdpbQe29w0_81W_bRtUkBcsUCzVkFod2GBJRskL7OgtoA=w1472-h708-no?authuser=0",
-        autoplay: true,
-      },
-
-    ],
-  },
-  {
     title: "Conception d'ensemble de pictogrammes pour l'instruction crypto-monnaie",
     description: "2018",
     blocks: [
@@ -290,37 +268,6 @@ const data: Project[] = [
     blocks: [
       {
         link: "https://lh3.googleusercontent.com/IcAggMr-TGVFXzh6C50Dr8e7G1Xjck3xyYPq97MrtLrTh_9QW1NKAHDIKj8uM_Zmk4wQfAuHyg4wdZk3xo265kk7PCfxfwPzQTwGM7__NujN6VZXSuLphKYI-6gcT_pW_o0dxqeSpgdFvWjIaA9LBce56D6wuj7BuIyLCUIElbRdlHl1uMubZGwfQwmEPwz1-nwxW06yzKZbPI5_vGYWaZSa9VPtQWXGCMrpxcHGHNHJz17fk1y073c2CF3Nuunf3KS8H1lnx2aRMtmNEEUHdtsHCIMhBd3zXPe2eqt1tBIm5VLz5V2Rq7eRPDdQkxq3n03c_vlXLqOaMnII7Is0n0tK4ucUoMhoDhkI6SINUKci7Yj__fcpEZZAcUA3mYUueGlOOYaQpfqbxkoT-hntDG6IQ_0LIFFysVanDQymD7kGP-tYzAefH29LU1jaMK6YwEFwY9ToNwv_nqf5gzYpz9OcEUYj5nC1KMO26ny0wS8Um3RriGmquB_yC__SC6f9cWIcY35PkZ-EtCDzX4r46W898IfAjq9iWtR_JDX5R0V-L7humnEmFWaCQ0sOOWkqwwLFpfS2fAhddoPNmbBxDpfM9krAV0W8mL7w2pF8JmxKIohVp7AYQVF6OIhCRoKsBKr4DrvCE_VpP9Q2GjVLfIhlBDNfrH46c4QWNymaohdMrz1gMbWOioNxzjCqcv6bOtbX4BraxWUeV8efA3djuGDTKg=w2156-h888-no?authuser=0",
-        autoplay: true,
-      },
-
-    ],
-  }, {
-    title: "Identité visuelle de la boutique en ligne Hitbox",
-    description: "2020",
-    blocks: [
-      {
-        link: "",
-        autoplay: true,
-      },
-
-    ],
-  }, {
-    title: "",
-    description: "",
-    blocks: [
-      {
-        link: "https://lh3.googleusercontent.com/UH8PhROHJwfh08sGxjyPEykN9xiJqt8HVLeam5XAL8Bj1w5IFIn3YNXTYXYXDCmYGJJhGmnMU9stiSHsOf10rPykrs5Gl9rpF-jHmhfsZ6Wa79FlL7PWoYQvkVF_zByBPJ0RztFM9zoCqlvA7CCyNglbIc62C-y-tkIa5mCuADwXpSAFs5BAhYYPj09frvHmv9lcgjNh3ffKkDiJU_VNUx97qcjWDcn_q_EV8Ld3VUI4xIIxtczrR1qgdrqEUtmZ0n66SLx_pr5JOn7-20x612Eosk3uA10k3M-gEDG45bVz3wIrm6PgmMS8ies79vUPBiHk4JR2l-QFDaIa60MUXR3xBqyNeIo8i2gPr343aMcK509aVBxFyqelBpujDQ_acQiJsCAJn9Peo1WtOALibwRXCXpIlxrtFzU7d2HT8oclJmIOYMlFQqOg4ikpvIn1ASV8kg8ktuJr9Rq54_i9JyzTC23TM8RN5_a_sX8xFCOXrB9sXrj71peLh5GEMqDfAzhHvlRMjPCmELOiM_mprwur3gApylTIDcQCqPBvhskr6fL0r_5MYnr0QrtHqwM6jDFCMmTOTu4SW9U5D9aVQW-1ziQTFg6UhSNFimqneRA215-8UxYV5F8wtPDuAkaaSosGFVDdC4Sj0R9SR6j2u8dd_udmXid3ebBw41-OI5Ot8Y96bvgIATr64xkNPB57PT_IMs8YqICRKUygo1G9YbzEzQ=w2156-h1002-no?authuser=0",
-        autoplay: true,
-      },
-
-    ],
-  }, 
-  {
-    title: "",
-    description: "",
-    blocks: [
-      {
-        link: "https://lh3.googleusercontent.com/iy3ovRsW1Y0CW7syui3G281SDY6Lu4W8FTLyEI-mKVqKAgxBP-uyD1KH84Gijx0f-wyvfikBkcNGzezzjSm7HLDM8o5Q1lBSwxMmuX1LqZeq7E-bN02EVpuxHNJkaxZOcmwR1CBz8fiB7tgMp1ax2WCwR_p2lZUuMkyF6KjUzSXLFvSUB1YnW_Z_gOgT1cOqib4604XvJLjuWehqqpKQ8W3ABOhTuYxgHv-klDHpSr36P-zYRpvBNn02b7cP-ryY_hUb3uJ4EyHlM0H-B2XhI9DBy2_oFUqMlFU27IzJUOgtbQI1LJ2eXHlUOpfg-tkWxbcWRXP_IaCKAshnJDoy1_VrMVQOuJuySsK1eGJwVwPnGy5W3r2dtVNx2YhVulLah-_5HVAyYsal2BzlE7b-WdIIxG6O6IONnuH7D-Wbzm9v3IYclTXmH9RqjxXvTdyc89Ce2fX_bJXrfyLUmnIy9I5hby0Xhfe3ErdgEqt2Bce-kwR8fJT2v1K46KDO_NkVA_py0cUIhmxmw72guS1Id8mTHb-pwTYnk3AV34FnWcQVUvxsSBO1Jy2o690gEFQnXRpRCxbls80XOM9GcX_cTz8L3ecwNvmxfxHjaYA_CvqPL9KQv6n6WYCJZo3z_Qdaz-GihXnKq0PqNWJ6b8QEh7TxbYOUjwz0sAYvco4BMmxNLibZ7gfTKRYGE1JaBhQ95Sy4EaFq48O_oR9p7SR3azNcHg=w2156-h1012-no?authuser=0",
         autoplay: true,
       },
 
