@@ -2,11 +2,11 @@
 
 @font-face
   font-family: 'Podpisi'
-  src: url('./fonts/Podpisi.ttf') format('truetype')
+  src: url('./fonts/Podpisi.otf') format('opentype')
 
 @font-face
   font-family: 'Zagolovki'
-  src: url('./fonts/Zagolovki.ttf') format('truetype')
+  src: url('./fonts/Zagolovki.otf') format('opentype')
 
 .desktop-only
   @include media-breakpoint-down(md)
@@ -178,26 +178,38 @@ body
       @extend .abs-cover
       opacity: 0
     // @extend .desktop-only
-  &::before,
-  &::after
-    @extend .desktop-only
-    content: ''
-    width: 100%
-    height: 10%
-    background-color: $dark
-    position: absolute
-    z-index: 10
-    left: 0
-  &::before
-    top: 0
-    height: 14%
-  &::after
-    bottom: 0
+  // &::before,
+  // &::after
+  //   @extend .desktop-only
+  //   content: ''
+  //   width: 100%
+  //   height: 10%
+  //   background-color: $dark
+  //   position: absolute
+  //   z-index: 10
+  //   left: 0
+  // &::before
+  //   top: 0
+  //   height: 14%
+  // &::after
+  //   bottom: 0
   &__mobile
     // @extend .mobile-only
     width: 100% !important
     margin-top: -56.25%
     height: auto
+  &__thumbnail
+    width: 100%
+    margin-top: -56.25%
+    padding-top: 56.25%
+    position: relative
+    &__play-button
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 50px
+      height: auto
+      transform: translate(-50%, -50%)
 
 .contact_text
   padding-bottom: 70px
@@ -223,7 +235,7 @@ body
     &__item
       @extend .button
       display: inline-block
-      width: 30%
+      width: 100%
       text-align: center
       margin-bottom: rem(42)
       border-radius: rem(0)

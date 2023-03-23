@@ -1,15 +1,14 @@
 import React from 'react'
-import {
-  NavLink
-} from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 import routes from '../routes'
 import logo from '../styles/img/logo.svg'
 
 
 type State = {
-  opened: boolean;
+  opened: boolean
 }
+
 
 class Header extends React.Component<{}, State> {
   constructor(props: {}) {

@@ -1,17 +1,20 @@
-import React, { FunctionComponent } from 'react'
+import React from 'react'
+
+import Linkify from 'react-linkify'
 
 import Video from '../components/Video_'
 import { Project } from '../types'
 import getVideoId from '../utils/getVideoId'
-import Linkify from 'react-linkify';
 
 
-
-type Props = {
+type LayoutProps = {
   projects: Project[]
 }
 
-const Header: FunctionComponent<Props> = ({ projects }) =>
+
+const Layout: React.FC<LayoutProps> = ({
+  projects
+}) =>
   <div className="Layout">
     {projects.map(project =>
       <div className="Layout__project">
@@ -36,14 +39,18 @@ const Header: FunctionComponent<Props> = ({ projects }) =>
           )}
         </div>
         <h1 className="Layout__project__h1">
-        <Linkify>{project.title}</Linkify>
+        <Linkify>
+          {project.title}
+        </Linkify>
         </h1>
         <div className="Layout__project__description">
-        <Linkify>{project.description}</Linkify>
+        <Linkify>
+          {project.description}
+        </Linkify>
         </div>
       </div>
     )}
   </div>
 
 
-export default Header
+export default Layout

@@ -8,7 +8,7 @@ const data: Project[] = [
     blocks: [
       {
         link: "",
-        autoplay: false,
+        autoplay: false
       },
 
     ],
