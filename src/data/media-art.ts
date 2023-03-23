@@ -3,6 +3,92 @@
 
 const data: Project[] = [
   {
+    title: "Pianoctambule 2022 VERS L'EXTASE - 150e anniversaire d'Alexandre Scriabine",
+    description: "Projections audioréactives en temps réel",
+    blocks: [
+      {
+        link: "",
+        autoplay: false,
+      },
+
+    ],
+  },
+  {
+    title: "",
+    description: "",
+    blocks: [
+      {
+        link: "https://youtu.be/24bCKPYgvUg",
+        autoplay: false,
+      },
+
+    ],
+  },
+  {
+    title: "",
+    description: "",
+    blocks: [
+      {
+        link: "https://youtu.be/WYei7GjiCbI",
+        autoplay: false,
+      },
+
+    ],
+  },
+   {
+    title: "",
+    description: "",
+    blocks: [
+      {
+        link: "https://youtu.be/Rz6179F3_24",
+        autoplay: false,
+      },
+
+    ],
+  },
+  {
+    title: "",
+    description: "",
+    blocks: [
+      {
+        link: "https://youtu.be/fNoV0Bfcpvk",
+        autoplay: false,
+      },
+
+    ],
+  },
+  {
+    title: "",
+    description: "",
+    blocks: [
+      {
+        link: "https://youtu.be/hPQsBwGelhI",
+        autoplay: false,
+      },
+
+    ],
+  },
+  {
+    title: "PIXELS&VOXELS installation 2021",
+    description: "Marta Shilova, Nicolas Alexandrov",
+    blocks: [
+      {
+        link: "https://youtu.be/SiKbOCHi0_8",
+        autoplay: false,
+      },
+    ],
+  },
+  {
+    title: "Ecologie de la conscience 2022",
+    description: "Marta Shilova, Nicolas Alexandrov, Rym Esseghaier, Anna Udras. TOUT LE SURPLUS INFORMATIQUE (SPAM) QUE NOUS VOYONS ET ENTENDONS À CHAQUE SECONDE NE NOUS PERMET PAS DE NOUS CONCENTRER SUR NOUS-MÊMES, DE S'ENTENDRE ET DE COMPRENDRE CE QUE NOUS VOULONS NOUS-MÊMES. NOTRE PROJET C’EST L'ESSAI DE CONSTRUIRE UN DIALOGUE DE SPECTATEUR AVEC LUI-MÊME. - http://third-worlder.tilda.ws",
+    blocks: [
+      {
+        link: "https://youtu.be/NTxQ_s-Pnuk",
+        autoplay: false,
+      },
+    ],
+  },
+  {
     title: "",
     description: "",
     blocks: [
