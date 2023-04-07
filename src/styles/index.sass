@@ -145,14 +145,6 @@ body
       &__item
         @extend .flex-grow-1
         @extend .mx-3
-      &__img
-        @extend .mx-3
-        width: 100%
-          // max-width: 45vw
-        cursor: zoom-in
-        @include media-breakpoint-down(md)
-          width: 100%
-            //max-width: 90%
     &__h1
       font-family: 'Zagolovki', Helvetica, sans-serif
       position: relative
@@ -276,3 +268,29 @@ figcaption
 figure
   img
     cursor: zoom-out !important
+
+
+
+.Img
+  @extend .mx-3
+  width: 100%
+  cursor: zoom-in
+  @include media-breakpoint-down(md)
+    width: 100%
+      //max-width: 90%
+  &--fullscreen
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    cursor: zoom-out
+  &__fullscreen-container
+    position: fixed
+    z-index: 1000
+    top: 0
+    left: 0
+    content: ''
+    width: 100vw
+    height: 100vh
+    background-color: rgba(0, 0, 0, .7)
+    cursor: zoom-out

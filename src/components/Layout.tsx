@@ -3,6 +3,7 @@ import React from 'react'
 import Linkify from 'react-linkify'
 
 import Video from '../components/Video_'
+import Img from '../components/Img'
 import { Project } from '../types'
 import getVideoId from '../utils/getVideoId'
 
@@ -28,13 +29,9 @@ const Layout: React.FC<LayoutProps> = ({
                 mobile={block.mobile}
               />
               :
-              <img 
-                src={block.link}
-                alt={block.description || ""}
-                data-title={project.title || ""}
-                data-caption={block.description || ""}
-                className="Layout__project__video__img intense lazyload"
-                loading="lazy"
+              <Img
+                src={block.link || ''}
+                alt={block.description || ''}
               />
           )}
         </div>
