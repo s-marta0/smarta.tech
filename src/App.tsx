@@ -3,27 +3,28 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-} from "react-router-dom"
+} from 'react-router-dom'
 
 import Header from './components/Header'
+import ScrollToTop from './components/ScrollToTop'
 import routes from './routes'
 
 import './styles/index.sass'
 
 
-class App extends React.Component {
-  render = () =>
-    <div className="App">
-      <Router>
+const App: React.FC = () =>
+  <Router>
+    <div className='App'>
+      <ScrollToTop>
         <Header />
-        <div className="content">
-          <div className="container">
+        <div className='content'>
+          <div className='container'>
             <Switch>
               {routes.map(route =>
                 <Route
                   key={route.link}
                   path={route.link}
-                  exact={route.link === "/"}
+                  exact={route.link === '/'}
                 >
                   {route.comp}
                 </Route>
@@ -31,9 +32,9 @@ class App extends React.Component {
             </Switch>
           </div>
         </div>
-      </Router>
+      </ScrollToTop>
     </div>
-}
+  </Router>
 
 
 export default App

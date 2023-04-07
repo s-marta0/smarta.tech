@@ -61,14 +61,24 @@ body
   background-color: $dark
 
 .App
-  overflow: hidden
   width: 100%
-  height: 100vh
+  height: 100%
   font-size: rem(20)
-  @extend .d-flex
-  @extend .flex-column
+  overflow: visible
+  // @extend .d-flex
+  // @extend .flex-column
 
 .Header
+  &--placeholder
+    border: none
+    margin-bottom: rem(50)
+  &--fixed
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 999
+    width: 100vw
+    background-color: black
   height: rem(70)
   min-height: rem(70)
   border-bottom: 1px solid $light
@@ -131,7 +141,7 @@ body
   @extend .flex-grow-1
   overflow-x: hidden
   overflow-y: overlay
-  padding-top: rem(50)
+  // padding-top: rem(50)
 
 .Layout
   &__project
