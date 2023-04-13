@@ -2,6 +2,7 @@ import React from 'react'
 
 import { isMobile } from 'react-device-detect'
 
+import Img from './Img'
 import logo from '../styles/img/play_button.webp'
 
 
@@ -69,9 +70,10 @@ const Video: React.FC<VideoProps> = ({
             plaing_video_with_sound()
             :
             <div className='video__thumbnail'>
-              <img
+              <Img
+                crop
+                className='video__thumbnail__img'
                 src={thumbnail}
-                className='abs-cover'
                 onClick={() => set_thumbnail_is_clicked(true)}
               />
               <img

@@ -7,19 +7,8 @@ const data: Project[] = [
     description: "Projections audioréactives en temps réel",
     blocks: [
       {
-        link: "",
-        autoplay: false
-      },
-
-    ],
-  },
-  {
-    title: "",
-    description: "",
-    blocks: [
-      {
         link: "https://youtu.be/24bCKPYgvUg",
-        autoplay: false,
+        autoplay: false
       },
 
     ],
