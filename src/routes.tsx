@@ -6,6 +6,7 @@ import MotionDesign from './pages/MotionDesign'
 import GraphicDesign from './pages/GraphicDesign'
 import Photography from './pages/Photography'
 import Contacts from './pages/Contacts'
+import Main from './pages/Main'
 
 
 type Route = {
@@ -17,8 +18,13 @@ type Route = {
 
 const routes: Route[] = [
   {
-    label: "Motion Design",
+    label: "",
     link: "/",
+    comp: <Main />
+  },
+  {
+    label: "Motion Design",
+    link: "/motion",
     comp: <MotionDesign />
   },
   {

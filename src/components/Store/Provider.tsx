@@ -31,7 +31,7 @@ const Provider: React.FC<PropsType> = ({ children }) => {
   }
   const initializeCallBacks: Function[] = []
   const initialization = async () => {
-    await loadContentful()
+    // await loadContentful()
     callInitializeCallbacks()
     setState({ ready: true })
   }

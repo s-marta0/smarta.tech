@@ -17,7 +17,6 @@ import Test from './components/Test'
 const App: React.FC = () =>
   <Router>
     <Provider>
-    <Test />
       <div className='App'>
         <ScrollToTop>
           <Header />

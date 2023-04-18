@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 import routes from '../routes'
 import logo from '../styles/img/logo.svg'
@@ -25,10 +25,12 @@ class Header extends React.Component<{}, State> {
       <header className='Header Header--fixed'>
         <div className='container h-100'>
           <div className='d-flex flex-row align-items-center h-100'>
-            <img
-              className="Header__logo"
-              src={logo}
-            />
+            <Link to='/'>
+              <img
+                className="Header__logo"
+                src={logo}
+              />
+            </Link>
             <div
               className="Header__burger ml-auto"
               onClick={() => this.setState({
@@ -36,7 +38,7 @@ class Header extends React.Component<{}, State> {
               })}
             />
             <div className={`Header__links ${this.state.opened && "Header__links--opened"}`}>
-              {routes.map(route =>
+              {routes.slice(1).map(route =>
                 <NavLink
                   exact={route.link === "/"}
                   to={route.link}

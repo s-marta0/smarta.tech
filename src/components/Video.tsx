@@ -60,7 +60,7 @@ const Video: React.FC<VideoProps> = ({
         :
         autoplay ?
           <iframe
-            src={`https://www.youtube.com/embed/${src}?autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;&amp;playerapiid=featuredytplayer&amp;controls=0&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;color=white&amp;iv_load_policy=3&amp;theme=light&amp;wmode=transparent&amp;playlist=${src}&amp;mute=1`}
+            src={`https://www.youtube.com/embed/${src.replace('https://youtu.be/', '')}?autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;&amp;playerapiid=featuredytplayer&amp;controls=0&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;color=white&amp;iv_load_policy=3&amp;theme=light&amp;wmode=transparent&amp;playlist=${src.replace('https://youtu.be/', '')}&amp;mute=1`}
             className={`video__iframe ${mobile && "desktop-only"} lazyload`}
             title={src}
             frameBorder="0"
@@ -82,6 +82,7 @@ const Video: React.FC<VideoProps> = ({
               <img
                 className='video__thumbnail__play-button'
                 src={logo}
+                onClick={() => set_thumbnail_is_clicked(true)}
               />
             </div>
       }
