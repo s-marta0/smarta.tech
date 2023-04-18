@@ -16,7 +16,7 @@ import Test from './components/Test'
 
 const App: React.FC = () =>
   <Router>
-    {/* <Provider> */}
+    <Provider>
     <Test />
       <div className='App'>
         <ScrollToTop>
@@ -38,7 +38,7 @@ const App: React.FC = () =>
           </div>
         </ScrollToTop>
       </div>
-    {/* </Provider> */}
+    </Provider>
   </Router>
 
 

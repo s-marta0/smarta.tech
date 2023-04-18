@@ -44,9 +44,6 @@ const Provider: React.FC<PropsType> = ({ children }) => {
     if (!state.ready)
       initialization()
   }, [])
-  useEffect(() => {
-    console.log(state.contentfulData)
-  }, [state.ready])
 
   const registerInitializeCallback = (fn: Function) => {
     initializeCallBacks.push(fn)
@@ -56,6 +53,16 @@ const Provider: React.FC<PropsType> = ({ children }) => {
   const callInitializeCallbacks = () =>
     setTimeout(() => initializeCallBacks.forEach((callback) => callback()), 50)
 
+  React.useLayoutEffect(() => {
+    const upd = () => setState({
+      youtubeIframeWorks: window.innerWidth >= 992
+    })
+    window.addEventListener('resize', upd)
+    upd()
+
+    return () => window.removeEventListener('resize', upd)
+  }, [])
+    
   const stateAndSetters = () => {
     const nonState: NonStateType = {
       setState,

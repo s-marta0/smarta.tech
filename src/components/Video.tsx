@@ -1,9 +1,10 @@
 import React from 'react'
 
-import { isMobile } from 'react-device-detect'
+// import { isMobile } from 'react-device-detect'
 
 import Img from './Img'
 import logo from '../styles/img/play_button.webp'
+import { Context } from './Store'
 
 
 type VideoProps = {
@@ -43,11 +44,13 @@ const Video: React.FC<VideoProps> = ({
       loading="lazy"
     />
 
+  const { youtubeIframeWorks } = React.useContext(Context)
+  
   return (
     <div
       className={`video ${className}`}
     >
-      {isMobile && mobile != undefined ?
+      {!youtubeIframeWorks && mobile != undefined ?
         <img
           src={mobile}
           className={`video__mobile ${mobile && "mobile-only"} intense lazyload`}

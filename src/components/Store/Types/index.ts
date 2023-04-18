@@ -12,6 +12,8 @@ export type StateType = {
   locale: string //'en-US' | 'fr'
   contentfulData: any// | ContentfulLocale[]
   contentful: ContentfulLocale
+
+  youtubeIframeWorks: boolean
 }
 const initialState = {
   ready: false,
@@ -19,6 +21,8 @@ const initialState = {
   locale: 'en-US',
   contentfulData: [],
   contentful: {},
+
+  youtubeIframeWorks: true
 }
 
 export type NonStateType = {
