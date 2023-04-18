@@ -3,6 +3,12 @@ import ExternalLink from "../components/ExternalLink"
 
 import contactImg from "../styles/img/contact.jpg"
 
+import MailImg from "../styles/img/contacts/mail.svg"
+import InstImg from "../styles/img/contacts/inst.svg"
+import FbImg from "../styles/img/contacts/fb.svg"
+import TgImg from "../styles/img/contacts/tg.svg"
+import YtImg from "../styles/img/contacts/yt.svg"
+
 
 class Contacts extends React.Component<{}, {}> {
   render = () =>
@@ -15,52 +21,42 @@ class Contacts extends React.Component<{}, {}> {
           <div className="contact_text">
             Je m'appelle Marta, je suis visual & interaction designer. J'aime créer des projets a l'intersection du design, de la science et de l'art. Collaborer avec des spécialistes au niveau international
           </div>
-          <div className="row">
-            <div className="col-6">
-              <ExternalLink
-                newTab
-                to="https://t.me/ssmarta"
-                className="Contacts__links__item"
-              >
-                Telegram
-              </ExternalLink>
-            </div>
-            <div className="col-6">
-              <ExternalLink
-                newTab
-                to="https://www.youtube.com/channel/UCKQpivpLQOIo2AHrwzsu2-g/videos?view_as=subscriber"
-                className="Contacts__links__item"
-              >
-                Youtube
-              </ExternalLink>
-            </div>
-            <div className="col-6">
-              <ExternalLink
-                newTab
-                to="https://www.facebook.com/sssmarta"
-                className="Contacts__links__item"
-              >
-                Facebook
-              </ExternalLink>
-            </div>
-            <div className="col-6">
-              <ExternalLink
-                newTab
-                to="https://www.instagram.com/slipper0"
-                className="Contacts__links__item"
-              >
-                Instagram
-              </ExternalLink>
-            </div>
-            <div className="col">
-              <ExternalLink
-                newTab
-                to="mailto:martashilova@gmail.com"
-                className="Contacts__links__item"
-              >
-                Email
-              </ExternalLink>
-            </div>
+          <div className="d-flex flex-row">
+            <ExternalLink
+              newTab
+              to="mailto:martashilova@gmail.com"
+              className="Contacts__links__item"
+            >
+              <img src={MailImg} alt="" />
+            </ExternalLink>
+            <ExternalLink
+              newTab
+              to="https://www.instagram.com/slipper0"
+              className="Contacts__links__item"
+            >
+              <img src={InstImg} alt="" />
+            </ExternalLink>
+            <ExternalLink
+              newTab
+              to="https://www.facebook.com/sssmarta"
+              className="Contacts__links__item"
+            >
+              <img src={FbImg} alt="" />
+            </ExternalLink>
+            <ExternalLink
+              newTab
+              to="https://t.me/ssmarta"
+              className="Contacts__links__item"
+            >
+              <img src={TgImg} alt="" />
+            </ExternalLink>
+            <ExternalLink
+              newTab
+              to="https://www.youtube.com/channel/UCKQpivpLQOIo2AHrwzsu2-g/videos?view_as=subscriber"
+              className="Contacts__links__item"
+            >
+              <img src={YtImg} alt="" />
+            </ExternalLink>
           </div>
 
         </div>

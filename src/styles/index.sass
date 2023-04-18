@@ -81,7 +81,7 @@ body
     background-color: black
   height: rem(70)
   min-height: rem(70)
-  border-bottom: 1px solid $light
+  // border-bottom: 1px solid $light
   // margin-bottom: rem(50)
   @extend .d-flex
   @extend .flex-row
@@ -89,9 +89,13 @@ body
   @extend .justify-content-md-around
   @extend .justify-content-between
   &__logo
-    height: rem(42)
+    height: 36px
+    transform: translateY(-7px)
     width: auto
+    display: flex-item
+    padding-right: 20px
   &__links
+    @extend .h-100
     @extend .d-flex
     @extend .flex-grow-1
     @extend .flex-md-row
@@ -100,13 +104,18 @@ body
     @extend .justify-content-around
     // @extend .justify-content-md-end
     // @extend .justify-content-start
+    text-transform: uppercase
     .Link
       font-family: 'Zagolovki', Helvetica, sans-serif !important
       font-size: rem(18) !important
       color: $light
-      &--hover
-        color: $light
-        text-decoration: underline
+      line-height: 55px
+      padding: 0 10px
+      &:hover,
+      &--active
+        background-color: #454545
+        // color: $light
+        // text-decoration: underline
     @include media-breakpoint-down(md)
       background-color: $dark
       padding-right: rem(20)
@@ -132,9 +141,6 @@ body
 
 .Link
   color: $light
-  &--active
-    color: $light !important
-    text-decoration: underline
 
 .content
   width: 100%
@@ -208,6 +214,10 @@ body
     @extend .h1
     text-align: left
     @extend .mb-5
+    color: #72FD7D
+    @include media-breakpoint-up(lg)
+      font-size: 136px
+      line-height: 130px
   &__links
     @extend .col-12
     @extend .col-lg-6
@@ -220,24 +230,14 @@ body
     @include media-breakpoint-down(md)
       margin-top: 0
     &__item
-      @extend .button
-      display: inline-block
-      width: 100%
-      text-align: center
-      margin-bottom: rem(42)
-      border-radius: rem(0)
-      background-color: rgba(0, 0, 0, 0)
-      border: 1px solid white
-      color: white
-      font-size: rem(24)
-      line-height: rem(66)
-      &:hover
-        color: white
-        text-decoration: none
-      @include media-breakpoint-down(md)
-        margin-bottom: rem(35)
-        line-height: rem(42)
-        font-size: rem(18)
+      width: 29px
+      height: 29px
+      margin-right: 29px
+      cursor: pointer
+      @extend .d-flex
+      @extend .flex-column
+      @extend .justify-content-between
+      @extend .align-items-center
   &__photo
     @extend .col-12
     @extend .col-lg-6
