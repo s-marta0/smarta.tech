@@ -44,7 +44,8 @@ const Layout: React.FC<LayoutProps> = ({
             :
             <Img
               src={block.link || ''}
-              alt={block.description || ''}
+              description={block.description}
+              title={project.title}
             />
         )}
       </div>

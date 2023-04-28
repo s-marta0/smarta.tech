@@ -16,6 +16,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <script type="text/javascript" src="%PUBLIC_URL%/intense.min.js"></script>
+    <script type="text/javascript" src="%PUBLIC_URL%/lazysizes.min.js"></script>
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#000000">
     <script type="text/javascript">
@@ -58,6 +60,16 @@
     <title>Smarta Portfolio</title>
   </head>
   <body>
+    <script>
+      document.onpointermove = function() {
+        // Intensify all images with the 'intense' classname.
+          var elements = document.querySelectorAll( '.intense' );
+
+        Intense( elements );
+
+      }
+      </script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.
