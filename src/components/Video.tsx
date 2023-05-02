@@ -1,6 +1,6 @@
 import React from 'react'
 
-// import { isMobile } from 'react-device-detect'
+import { isMobile } from 'react-device-detect'
 
 import Img from './Img'
 import logo from '../styles/img/play_button.webp'
@@ -45,18 +45,22 @@ const Video: React.FC<VideoProps> = ({
     />
 
   const { youtubeIframeWorks } = React.useContext(Context)
-  
+
   return (
     <div
       className={`video ${className}`}
     >
-      {!youtubeIframeWorks && mobile != undefined ?
-        <img
-          src={mobile}
-          className={`video__mobile ${mobile && "mobile-only"} intense lazyload`}
-          alt=""
-          loading="lazy"
-        />
+      {/* {!youtubeIframeWorks && mobile != undefined ? */}
+      {isMobile ?
+        mobile ?
+          <img
+            src={mobile}
+            className={`video__mobile ${mobile && "mobile-only"} intense lazyload`}
+            alt=""
+            loading="lazy"
+          />
+          :
+          playing_video()
         :
         autoplay ?
           <iframe
