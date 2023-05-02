@@ -2,6 +2,16 @@ import { Project } from '../types'
 
 
 const data: Project[] = [
+    {
+    title: "Affiche pour le spectacle Batracia Bouée",
+    description: "printemps 2022",
+    blocks: [
+      {
+        link: "https://youtu.be/7xGYer_HBRY",
+        autoplay: false,
+      },
+    ],
+  },
   {
     title: "CoronaRhytmus",
     description: "printemps 2020",
