@@ -69,7 +69,7 @@ const data: Project[] = [
   },
   {
     title: "Ecologie de la conscience 2022",
-    description: "Marta Shilova, Nicolas Alexandrov, Rym Esseghaier, Anna Udras. TOUT LE SURPLUS INFORMATIQUE (SPAM) QUE NOUS VOYONS ET ENTENDONS À CHAQUE SECONDE NE NOUS PERMET PAS DE NOUS CONCENTRER SUR NOUS-MÊMES, DE S'ENTENDRE ET DE COMPRENDRE CE QUE NOUS VOULONS NOUS-MÊMES. NOTRE PROJET C’EST L'ESSAI DE CONSTRUIRE UN DIALOGUE DE SPECTATEUR AVEC LUI-MÊME. - http://third-worlder.tilda.ws",
+    description: "Marta Shilova, Nicolas Alexandrov, Rym Esseghaier, Anna Udras. Tout le surplus informatique (SPAM) que nous voyons et entendons à chaque seconde ne nous permet pas de nous concentrer sur nous-mêmes, de s'entendre et de comprendre ce que nous voulons nous-mêmes. Notre projet c'est l'essai de construire un dialogue de spectateur avec lui-même.http://third-worlder.tilda.ws",
     blocks: [
       {
         link: "https://youtu.be/NTxQ_s-Pnuk",
