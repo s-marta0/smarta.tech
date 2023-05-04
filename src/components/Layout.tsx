@@ -5,7 +5,6 @@ import Linkify from 'react-linkify'
 import Video from './Video'
 import Img from '../components/Img'
 import { Project } from '../types'
-import getVideoId from '../utils/getVideoId'
 
 
 type LayoutProps = {
@@ -37,7 +36,7 @@ const Layout: React.FC<LayoutProps> = ({
           block.link?.includes('youtu') ?
             <Video
               className=""
-              src={getVideoId(block.link)}
+              src={block.link}
               autoplay={block.autoplay || false}
               mobile={block.mobile}
             />
