@@ -27,6 +27,7 @@ class Header extends React.Component<{}, State> {
           <div className='d-flex flex-row align-items-center h-100'>
             <Link to='/'>
               <img
+                alt=''
                 className="Header__logo"
                 src={logo}
               />
@@ -40,6 +41,7 @@ class Header extends React.Component<{}, State> {
             <div className={`Header__links ${this.state.opened && "Header__links--opened"}`}>
               {routes.slice(1).map(route =>
                 <NavLink
+                  key={route.link}
                   exact={route.link === "/"}
                   to={route.link}
                   className="Link"

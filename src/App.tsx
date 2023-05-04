@@ -11,7 +11,7 @@ import ScrollToTop from './components/ScrollToTop'
 import routes from './routes'
 
 import './styles/index.sass'
-import Test from './components/Test'
+// import Test from './components/Test'
 
 
 const App: React.FC = () =>

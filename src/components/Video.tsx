@@ -54,19 +54,17 @@ const Video: React.FC<VideoProps> = ({
         onClick={() => set_thumbnail_is_clicked(true)}
       />
       <img
+        alt=''
         className='video__thumbnail__play-buttonn'
         src={logo}
         onClick={() => set_thumbnail_is_clicked(true)}
       />
     </div>
 
-  const { youtubeIframeWorks } = React.useContext(Context)
-
   return (
     <div
       className={`video ${className}`}
     >
-      {/* {!youtubeIframeWorks && mobile != undefined ? */}
       {isMobile ?
         mobile ?
           <img
