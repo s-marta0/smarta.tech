@@ -1,15 +1,20 @@
 import React from "react"
 
-import Layout from "../components/Layout"
+// import data from '../data/graphic-design'
+// import Layout from "../components/Layout"
+import { Context } from "../components/Store"
+import ContentfulLayout from "../components/ContentfulLayout"
 
-import data from '../data/graphic-design'
 
+const GraphicDesign: React.FC = () => {
+  const { contentful } = React.useContext(Context)
+  const section = contentful?.sections?.find(section => section.id === '7n5o8Ed4F6Lwmx4dxRhi1W')
 
-class GraphicDesign extends React.Component<{}, {}> {
-  render = () =>
+  return (
     <div className="GraphicDesign">
-      <Layout projects={data} />
+      {section?.projects && <ContentfulLayout projects={section?.projects} />}
     </div>
+  )
 }
 
 

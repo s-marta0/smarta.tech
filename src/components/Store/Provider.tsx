@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import { StateType, initialState, NonStateType } from './Types'
 import Context from './Context'
-import { createContentfulClient, parseContentfulItems } from '../../utils/contentful'
+import { loadContentfulData } from '../../utils/contentful'
 
 
 type PropsType = {
@@ -19,50 +19,37 @@ const Provider: React.FC<PropsType> = ({ children }) => {
       ...someParams
     })
   }
-  const loadContentful = async () => {
-    const client = createContentfulClient()
-
-    setState({
-      contentfulData: [
-        await parseContentfulItems((await client.getEntries({ limit: 200, })).items),
-        await parseContentfulItems((await client.getEntries({ limit: 200, locale: 'fr' })).items)
-      ]
-    })
-  }
   const initializeCallBacks: Function[] = []
-  const initialization = async () => {
-    // await loadContentful()
-    callInitializeCallbacks()
-    setState({ ready: true })
-  }
-
-  useEffect(() => {
-    if (!state.ready)
-      initialization()
-  }, [state.ready])
-  useEffect(() => {
-    if (!state.ready)
-      initialization()
-  }, [])
-
   const registerInitializeCallback = (fn: Function) => {
     initializeCallBacks.push(fn)
     state.ready && fn()
   }
 
-  const callInitializeCallbacks = () =>
+  useEffect(() => {
+    const callInitializeCallbacks = () =>
     setTimeout(() => initializeCallBacks.forEach((callback) => callback()), 50)
 
-  React.useLayoutEffect(() => {
-    const upd = () => setState({
-      youtubeIframeWorks: window.innerWidth >= 992
-    })
-    window.addEventListener('resize', upd)
-    upd()
+    const initialization = async () => {
+      setState({ loading: true })
+      console.log('Loading contentful...')
+      const contentfulData = await loadContentfulData()
 
-    return () => window.removeEventListener('resize', upd)
-  }, [])
-    
+      setState({
+        contentfulData,
+        ready: true,
+        loading: false
+      })
+      callInitializeCallbacks()
+      // setState({
+      //   ready: true,
+      //   loading: false
+      // })
+    }
+
+    if (!state.ready && !state.loading)
+      initialization()
+  }, [state, setState, initializeCallBacks])
+
   const stateAndSetters = () => {
     const nonState: NonStateType = {
       setState,
@@ -81,7 +68,7 @@ const Provider: React.FC<PropsType> = ({ children }) => {
 
   return (
     <Context.Provider value={stateAndSetters()}>
-      {children}
+      {state.ready ? children : 'loading...'}
     </Context.Provider>
   )
 }
