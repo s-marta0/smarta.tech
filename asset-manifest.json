@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.6a35aae4.chunk.css",
-    "main.js": "/static/js/main.913da783.chunk.js",
-    "main.js.map": "/static/js/main.913da783.chunk.js.map",
+    "main.css": "/static/css/main.93f6f00b.chunk.css",
+    "main.js": "/static/js/main.68fc3a32.chunk.js",
+    "main.js.map": "/static/js/main.68fc3a32.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2b73ca9e.js",
     "runtime-main.js.map": "/static/js/runtime-main.2b73ca9e.js.map",
     "static/js/2.0426c7cd.chunk.js": "/static/js/2.0426c7cd.chunk.js",
     "static/js/2.0426c7cd.chunk.js.map": "/static/js/2.0426c7cd.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.6a35aae4.chunk.css.map": "/static/css/main.6a35aae4.chunk.css.map",
+    "static/css/main.93f6f00b.chunk.css.map": "/static/css/main.93f6f00b.chunk.css.map",
     "static/js/2.0426c7cd.chunk.js.LICENSE.txt": "/static/js/2.0426c7cd.chunk.js.LICENSE.txt",
     "static/media/index.sass": "/static/media/burger.165e991d.svg",
     "static/media/contact.892c044f.jpg": "/static/media/contact.892c044f.jpg",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.2b73ca9e.js",
     "static/js/2.0426c7cd.chunk.js",
-    "static/css/main.6a35aae4.chunk.css",
-    "static/js/main.913da783.chunk.js"
+    "static/css/main.93f6f00b.chunk.css",
+    "static/js/main.68fc3a32.chunk.js"
   ]
 }
