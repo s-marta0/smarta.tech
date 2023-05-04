@@ -3,20 +3,23 @@ import { Link, NavLink } from "react-router-dom"
 
 import routes from '../routes'
 import logo from '../styles/img/logo.svg'
+import greenLogo from '../styles/img/logo-green.svg'
 
 
 type State = {
-  opened: boolean
+  opened: boolean;
+  hovered: boolean;
 }
 
 
 class Header extends React.Component<{}, State> {
   constructor(props: {}) {
-    super(props)
-
+    super(props);
+  
     this.state = {
-      opened: false
-    }
+      opened: false,
+      hovered: false
+    };
   }
 
   render = () =>
@@ -28,9 +31,12 @@ class Header extends React.Component<{}, State> {
             <Link to='/'>
               <img
                 className="Header__logo"
-                src={logo}
+                src={this.state.hovered ? greenLogo : logo}
+                onMouseEnter={() => this.setState({ hovered: true })}
+                onMouseLeave={() => this.setState({ hovered: false })}
               />
             </Link>
+            
             <div
               className="Header__burger ml-auto"
               onClick={() => this.setState({
