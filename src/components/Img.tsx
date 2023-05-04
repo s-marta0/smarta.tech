@@ -24,7 +24,7 @@ const Img: React.FC<ImgProps> = ({
   crop,
   onClick,
 }) => {
-  const [fullscreen, setFullscreen] = React.useState(false)
+  // const [fullscreen, setFullscreen] = React.useState(false)
   // const [portrait, setPortrait] = React.useState<boolean | undefined>(undefined)
 
   // const imgRef: any = React.useRef(null)
@@ -48,8 +48,8 @@ const Img: React.FC<ImgProps> = ({
         Img
         ${className}
         Img--${crop ? 'crop' : 'nocrop'}
-        Img--${fullscreen ? 'fullscreen' : 'default'}
-      `}
+        `}
+        // Img--${fullscreen ? 'fullscreen' : 'default'}
       // onClick={onClick || (() => setFullscreen(!fullscreen))}
     >
       {/* <img

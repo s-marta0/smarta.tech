@@ -5,6 +5,7 @@ import { isMobile } from 'react-device-detect'
 import Img from './Img'
 import logo from '../styles/img/play_button.webp'
 import { Context } from './Store'
+import getVideoId from '../utils/getVideoId'
 
 
 type VideoProps = {
@@ -22,12 +23,13 @@ const Video: React.FC<VideoProps> = ({
   mobile,
 }) => {
   const [thumbnail_is_clicked, set_thumbnail_is_clicked] = React.useState(false)
-  const thumbnail = 'https://img.youtube.com/vi/' + src.replace('https://youtu.be/', '') + '/sddefault.jpg'
+  const src_parsed = getVideoId(src)
+  const thumbnail = 'https://img.youtube.com/vi/' + src_parsed.replace('https://youtu.be/', '') + '/sddefault.jpg'
   const playing_video = () =>
     <iframe
-      src={`https://www.youtube.com/embed/${src}?autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;&amp;playerapiid=featuredytplayer&amp;controls=0&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;color=white&amp;iv_load_policy=3&amp;theme=light&amp;wmode=transparent&amp;playlist=${src}&amp;mute=1`}
+      src={`https://www.youtube.com/embed/${src_parsed}?autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;&amp;playerapiid=featuredytplayer&amp;controls=0&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;color=white&amp;iv_load_policy=3&amp;theme=light&amp;wmode=transparent&amp;playlist=${src_parsed}&amp;mute=1`}
       className={`video__iframe ${mobile && "desktop-only"} lazyload`}
-      title={src}
+      title={src_parsed}
       frameBorder="0"
       allow="autoplay"
       id="widget2"
@@ -35,22 +37,34 @@ const Video: React.FC<VideoProps> = ({
     />
   const plaing_video_with_sound = () =>
     <iframe
-      src={`https://www.youtube.com/embed/${src}?autoplay=1`}
+      src={`https://www.youtube.com/embed/${src_parsed}?autoplay=1`}
       className={`video__iframe ${mobile && "desktop-only"} lazyload`}
-      title={src}
+      title={src_parsed}
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
       loading="lazy"
     />
-
-  const { youtubeIframeWorks } = React.useContext(Context)
+  const render_thumbnail = () =>
+    <div className='video__thumbnail'>
+      <Img
+        crop
+        className='video__thumbnail__img'
+        src={thumbnail}
+        onClick={() => set_thumbnail_is_clicked(true)}
+      />
+      <img
+        alt=''
+        className='video__thumbnail__play-buttonn'
+        src={logo}
+        onClick={() => set_thumbnail_is_clicked(true)}
+      />
+    </div>
 
   return (
     <div
       className={`video ${className}`}
     >
-      {/* {!youtubeIframeWorks && mobile != undefined ? */}
       {isMobile ?
         mobile ?
           <img
@@ -64,9 +78,9 @@ const Video: React.FC<VideoProps> = ({
         :
         autoplay ?
           <iframe
-            src={`https://www.youtube.com/embed/${src.replace('https://youtu.be/', '')}?autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;&amp;playerapiid=featuredytplayer&amp;controls=0&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;color=white&amp;iv_load_policy=3&amp;theme=light&amp;wmode=transparent&amp;playlist=${src.replace('https://youtu.be/', '')}&amp;mute=1`}
+            src={`https://www.youtube.com/embed/${src_parsed.replace('https://youtu.be/', '')}?autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;&amp;playerapiid=featuredytplayer&amp;controls=0&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;color=white&amp;iv_load_policy=3&amp;theme=light&amp;wmode=transparent&amp;playlist=${src_parsed.replace('https://youtu.be/', '')}&amp;mute=1`}
             className={`video__iframe ${mobile && "desktop-only"} lazyload`}
-            title={src}
+            title={src_parsed}
             frameBorder="0"
             allow="autoplay"
             id="widget2"
@@ -76,19 +90,7 @@ const Video: React.FC<VideoProps> = ({
           thumbnail_is_clicked ?
             plaing_video_with_sound()
             :
-            <div className='video__thumbnail'>
-              <Img
-                crop
-                className='video__thumbnail__img'
-                src={thumbnail}
-                onClick={() => set_thumbnail_is_clicked(true)}
-              />
-              <img
-                className='video__thumbnail__play-button'
-                src={logo}
-                onClick={() => set_thumbnail_is_clicked(true)}
-              />
-            </div>
+            render_thumbnail()
       }
     </div>
   )

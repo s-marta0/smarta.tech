@@ -72,8 +72,17 @@ const parseContentfulText = (document: any) =>
           [i > 0 && <br key={i} />, text]),
   })
 
+const loadContentfulData = async () => {
+  const client = createContentfulClient()
+
+  return [
+    await parseContentfulItems((await client.getEntries({ limit: 200, })).items),
+    await parseContentfulItems((await client.getEntries({ limit: 200, locale: 'fr' })).items)
+  ]
+}
 
 export {
   createContentfulClient,
-  parseContentfulItems
+  parseContentfulItems,
+  loadContentfulData
 }

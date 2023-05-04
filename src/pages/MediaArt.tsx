@@ -1,15 +1,20 @@
 import React from "react"
 
-import Layout from "../components/Layout"
+// import data from '../data/media-art'
+// import Layout from "../components/Layout"
+import { Context } from "../components/Store"
+import ContentfulLayout from "../components/ContentfulLayout"
 
-import data from '../data/media-art'
 
+const MediaArt: React.FC = () => {
+  const { contentful } = React.useContext(Context)
+  const section = contentful?.sections?.find(section => section.id === '2mjsMNa1gvwjMb8gXX8vNe')
 
-class MediaArt extends React.Component<{}, {}> {
-  render = () =>
+  return (
     <div className="MediaArt">
-      <Layout projects={data} />
+      {section?.projects && <ContentfulLayout projects={section?.projects} />}
     </div>
+  )
 }
 
 
