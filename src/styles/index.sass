@@ -45,6 +45,12 @@
 @function rem($px)
   @return calc(#{$px} / 16 * 1rem)
 
+@keyframes fadeOut
+  from
+    opacity: 1
+  to
+    opacity: 0
+
 // COLORS
 $dark: black
 $light: white
@@ -187,6 +193,50 @@ body
       content: ''
       @extend .abs-cover
       opacity: 0
+  &__sound-icon
+    position: absolute
+    bottom: rem(20)
+    right: rem(20)
+    z-index: 100
+    cursor: pointer
+    background-color: rgba(0, 0, 0, 0.5)
+    border-radius: 50%
+    width: 48px
+    height: 48px
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: background-color 0.3s ease, transform 0.2s ease
+    backdrop-filter: blur(4px)
+    svg
+      width: 24px
+      height: 24px
+      transition: transform 0.2s ease
+    &:hover
+      background-color: rgba(0, 0, 0, 0.7)
+      transform: scale(1.1)
+    &:active
+      transform: scale(0.95)
+  &__hint
+    position: absolute
+    bottom: rem(80)
+    right: rem(20)
+    z-index: 100
+    background-color: rgba(0, 0, 0, 0.6)
+    backdrop-filter: blur(4px)
+    padding: rem(10) rem(15)
+    border-radius: rem(4)
+    font-size: rem(14)
+    color: white
+    font-family: 'Podpisi', Helvetica, sans-serif
+    white-space: nowrap
+    animation: fadeOut 0.5s ease-out 4.5s forwards
+    pointer-events: none
+    @include media-breakpoint-down(md)
+      bottom: rem(70)
+      right: rem(20)
+      font-size: rem(12)
+      padding: rem(8) rem(12)
   &__mobile
     width: 100% !important
     margin-top: -56.25%
@@ -210,6 +260,226 @@ body
 .contact_text
   padding-bottom: 70px
 
+.About
+  padding-top: rem(20)
+  padding-bottom: rem(40)
+  transition: filter 0.5s ease
+  position: relative
+  &.photo-hovered
+    .About__content
+      filter: blur(8px)
+    .About__footer
+      filter: blur(8px)
+    .About__photo
+      filter: blur(0) !important
+    .About__photo-wrapper
+      filter: blur(0) !important
+    .About__photo-wrapper img
+      filter: blur(0) !important
+  .container
+    @include media-breakpoint-up(lg)
+      padding-left: 0
+      padding-right: 15px
+      position: relative
+  .row
+    display: flex
+    flex-wrap: wrap
+    margin-left: 0
+    margin-right: 0
+    &:first-of-type
+      @include media-breakpoint-up(lg)
+        align-items: flex-start
+        position: relative
+      .col-lg-6:first-child
+        @include media-breakpoint-up(lg)
+          padding-left: 0 !important
+          padding-right: rem(60)
+          margin-left: -15px
+      .col-lg-6:last-child
+        @include media-breakpoint-up(lg)
+          padding-left: rem(60)
+          padding-right: 0
+  &__content
+    @extend .d-flex
+    @extend .flex-column
+    @extend .align-items-start
+    width: 100%
+    overflow: visible
+    position: relative
+    @include media-breakpoint-up(lg)
+      padding-left: 0 !important
+      padding-right: rem(60)
+      margin-left: -15px
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-start
+    @include media-breakpoint-down(md)
+      padding-left: 0 !important
+      padding-right: 0
+  &__name
+    font-family: 'Zagolovki', Helvetica, sans-serif
+    font-size: rem(144)
+    line-height: 1.0
+    color: #72FD7D
+    margin-bottom: rem(30)
+    @include media-breakpoint-down(md)
+      font-size: rem(96)
+      margin-bottom: rem(25)
+    @include media-breakpoint-down(sm)
+      font-size: rem(72)
+      margin-bottom: rem(20)
+  &__text
+    margin-bottom: rem(30)
+    width: 100%
+    overflow: visible
+    position: relative
+    @include media-breakpoint-down(md)
+      margin-bottom: rem(25)
+  &__paragraph
+    font-size: rem(20)
+    line-height: 1.2
+    color: rgba(255, 255, 255, 0.9)
+    margin-bottom: rem(18)
+    word-wrap: break-word
+    overflow-wrap: break-word
+    @include media-breakpoint-down(md)
+      font-size: rem(18)
+      line-height: 1.5
+      margin-bottom: rem(16)
+    @include media-breakpoint-down(sm)
+      font-size: rem(16)
+      line-height: 1.5
+      margin-bottom: rem(14)
+    &:last-child
+      margin-bottom: 0
+  &__contact
+    margin-top: rem(30)
+    display: block !important
+    width: 100% !important
+    position: relative
+    clear: both
+    flex: none !important
+    max-width: 100% !important
+    padding-left: 0 !important
+    padding-right: 0 !important
+    @include media-breakpoint-up(lg)
+      margin-top: rem(30)
+      padding-top: 0
+      padding-left: 0 !important
+      padding-right: 0 !important
+      display: block !important
+      padding-bottom: 0
+      position: relative
+      z-index: 10
+      margin-left: 0
+    @include media-breakpoint-down(md)
+      margin-top: rem(30)
+      padding-top: 0
+      padding-left: 0 !important
+      padding-right: 0 !important
+      padding-bottom: 0
+  &__social-links
+    gap: rem(20)
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    flex-wrap: nowrap
+    width: auto
+    align-items: center
+    @include media-breakpoint-down(md)
+      gap: rem(15)
+  &__social-item
+    width: 32px
+    height: 32px
+    min-width: 32px
+    min-height: 32px
+    cursor: pointer
+    transition: transform 0.3s ease
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-shrink: 0
+    overflow: visible
+    opacity: 1
+    img
+      width: 32px
+      height: 32px
+      min-width: 32px
+      min-height: 32px
+      display: block
+      object-fit: contain
+      transition: opacity 0.3s ease
+      opacity: 1
+      // Filter removed - icons should be green SVG files
+    &:hover
+      transform: translateY(-3px)
+      img
+        opacity: 0.8
+  &__photo
+    @extend .d-flex
+    @extend .justify-content-center
+    margin-bottom: rem(40)
+    filter: blur(0) !important
+    @include media-breakpoint-up(lg)
+      margin-bottom: 0
+      padding-left: rem(60)
+      display: flex
+      align-items: flex-end
+      justify-content: flex-start
+      padding-top: 0
+      padding-bottom: rem(32)
+    @include media-breakpoint-down(md)
+      margin-bottom: rem(30)
+      padding-left: 0
+      padding-bottom: 0
+  &__photo-wrapper
+    width: 100%
+    max-width: 500px
+    position: relative
+    overflow: hidden
+    border-radius: 4px
+    @include media-breakpoint-up(lg)
+      display: flex
+      align-items: flex-end
+      height: 100%
+    img
+      width: 100%
+      display: block
+      transition: transform 0.5s ease, filter 0.3s ease
+      object-fit: cover
+      object-position: center
+      position: relative
+      z-index: 0
+      @include media-breakpoint-up(lg)
+        height: calc(100vh - 200px)
+        min-height: 700px
+        object-fit: cover
+        object-position: top
+      @include media-breakpoint-down(md)
+        height: auto
+        min-height: 400px
+        max-height: 500px
+      @include media-breakpoint-down(sm)
+        height: auto
+        min-height: 300px
+        max-height: 400px
+    &:hover img
+      transform: scale(1.02)
+      filter: brightness(1.1) contrast(1.05)
+  &__footer
+    margin-top: rem(60)
+    @include media-breakpoint-down(md)
+      margin-top: rem(40)
+  &__credits
+    text-align: center
+    font-size: rem(14)
+    color: rgba(255, 255, 255, 0.5)
+    padding-top: rem(40)
+    border-top: 1px solid rgba(255, 255, 255, 0.1)
+    @include media-breakpoint-down(md)
+      font-size: rem(12)
+      padding-top: rem(30)
 
 .Contacts
   &__name
@@ -315,3 +585,229 @@ figure
 
 .mb-70
   margin-bottom: 70px
+
+.Projects
+  padding-top: rem(100)
+  position: relative
+  &__filters
+    @extend .d-flex
+    @extend .flex-wrap
+    @extend .justify-content-center
+    @extend .mb-5
+    gap: rem(20)
+    position: relative
+    z-index: 10
+  &__filter-btn
+    @extend .button
+    font-family: 'Zagolovki', Helvetica, sans-serif
+    font-size: rem(18)
+    color: $light
+    padding: rem(10) rem(20)
+    border: 1px solid $light
+    background-color: transparent
+    transition: all 0.3s ease
+    cursor: pointer
+    position: relative
+    z-index: 10
+    &:hover
+      background-color: rgba(255, 255, 255, 0.1)
+    &.active
+      background-color: $light
+      color: $dark
+      border-color: $light
+  &__grid
+    column-count: 3
+    column-gap: rem(30)
+    column-fill: balance
+    @include media-breakpoint-down(md)
+      column-count: 2
+      column-gap: rem(20)
+    @include media-breakpoint-down(sm)
+      column-count: 1
+      column-gap: rem(20)
+    &.has-hover
+      .Projects__grid-item:not(.hovered)
+        filter: blur(4px)
+        opacity: 0.6
+        pointer-events: none
+  &__grid-item
+    cursor: pointer
+    transition: transform 0.3s ease, filter 0.4s ease, opacity 0.4s ease
+    position: relative
+    z-index: 1
+    break-inside: avoid
+    page-break-inside: avoid
+    display: inline-block
+    width: 100%
+    margin-bottom: rem(30)
+    vertical-align: top
+    will-change: transform, filter, opacity
+    @include media-breakpoint-down(md)
+      margin-bottom: rem(20)
+    @include media-breakpoint-down(sm)
+      margin-bottom: rem(20)
+    &.hovered
+      z-index: 100
+      filter: blur(0px) !important
+      opacity: 1 !important
+      transform: scale(1.05)
+      pointer-events: auto
+      position: relative
+  &__cover
+    position: relative
+    width: 100%
+    height: 100%
+    overflow: hidden
+    background-color: rgba(255, 255, 255, 0.05)
+  &__cover-image
+    width: 100%
+    height: 100%
+    display: block
+    object-fit: cover
+    transition: transform 0.3s ease
+  &__image-wrapper,
+  &__video-wrapper
+    width: 100%
+    height: 100%
+    position: relative
+    overflow: hidden
+    .Projects__grid-item:hover &
+      .Projects__cover-image
+        transform: scale(1.1)
+    .video
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      .video__thumbnail,
+      .video__iframe
+        width: 100%
+        height: 100%
+        object-fit: cover
+  &__placeholder
+    width: 100%
+    height: 100%
+    background-color: rgba(255, 255, 255, 0.1)
+    @extend .d-flex
+    @extend .align-items-center
+    @extend .justify-content-center
+  &__title-overlay
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)
+    padding: rem(20) rem(15) rem(15)
+    font-family: 'Zagolovki', Helvetica, sans-serif
+    font-size: rem(18)
+    color: $light
+    text-align: left
+    transition: opacity 0.3s ease
+    @include media-breakpoint-down(md)
+      font-size: rem(16)
+      padding: rem(15) rem(12) rem(12)
+  &__image,
+  &__video
+    width: 100%
+    margin-bottom: rem(15)
+  &__title
+    font-family: 'Zagolovki', Helvetica, sans-serif
+    font-size: rem(16)
+    color: $light
+    text-align: center
+    margin-top: rem(10)
+  &__empty
+    text-align: center
+    padding: rem(50)
+    color: rgba(255, 255, 255, 0.5)
+    font-size: rem(18)
+
+.Main
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  z-index: 1
+  margin: 0
+  padding: 0
+  .video
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    padding-top: 0
+    margin: 0
+    .video__iframe
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      transform: none
+    .video__sound-icon
+      bottom: rem(30)
+      right: rem(30)
+      @include media-breakpoint-down(md)
+        bottom: rem(20)
+        right: rem(20)
+        width: 40px
+        height: 40px
+        svg
+          width: 20px
+          height: 20px
+    .video__thumbnail
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+
+.SingleProject
+  padding-top: rem(100)
+  &__back
+    margin-bottom: rem(40)
+  &__back-btn
+    @extend .button
+    font-family: 'Zagolovki', Helvetica, sans-serif
+    font-size: rem(18)
+    color: $light
+    padding: rem(10) rem(20)
+    border: 1px solid $light
+    background-color: transparent
+    transition: all 0.3s ease
+    cursor: pointer
+    &:hover
+      background-color: rgba(255, 255, 255, 0.1)
+      border-color: rgba(255, 255, 255, 0.5)
+  &__content
+    width: 100%
+  &__title
+    font-family: 'Zagolovki', Helvetica, sans-serif
+    font-size: rem(36)
+    color: $light
+    margin-bottom: rem(30)
+    @include media-breakpoint-down(md)
+      font-size: rem(28)
+  &__description
+    font-size: rem(18)
+    color: rgba(255, 255, 255, 0.8)
+    margin-bottom: rem(40)
+    line-height: 1.6
+    @include media-breakpoint-down(md)
+      font-size: rem(16)
+  &__not-found
+    text-align: center
+    padding: rem(100) rem(20)
+    h1
+      font-family: 'Zagolovki', Helvetica, sans-serif
+      font-size: rem(36)
+      color: $light
+      margin-bottom: rem(30)

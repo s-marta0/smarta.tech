@@ -1,11 +1,8 @@
 import React from 'react'
 
-import MediaArt from './pages/MediaArt'
-import ClassicArt from './pages/ClassicArt'
-import MotionDesign from './pages/MotionDesign'
-import GraphicDesign from './pages/GraphicDesign'
-import Photography from './pages/Photography'
-import Contacts from './pages/Contacts'
+import Projects from './pages/Projects'
+import PublicationsTalks from './pages/PublicationsTalks'
+import About from './pages/About'
 import Main from './pages/Main'
 
 
@@ -23,34 +20,19 @@ const routes: Route[] = [
     comp: <Main />
   },
   {
-    label: "Motion Design",
-    link: "/motion",
-    comp: <MotionDesign />
+    label: "Projects",
+    link: "/projects",
+    comp: <Projects />
   },
   {
-    label: "New Media",
-    link: "/media",
-    comp: <MediaArt />
+    label: "Publications/Talks",
+    link: "/publications-talks",
+    comp: <PublicationsTalks />
   },
   {
-    label: "Graphic Design",
-    link: "/graphics",
-    comp: <GraphicDesign />
-  },
-  // {
-  //   label: "Classic Art",
-  //   link: "/classic",
-  //   comp: <ClassicArt />
-  // },
-  // {
-  //   label: "Photography",
-  //   link: "/photo",
-  //   comp: <Photography />
-  // },
-  {
-    label: "Contacts",
-    link: "/contacts",
-    comp: <Contacts />
+    label: "About/Contact",
+    link: "/about-contact",
+    comp: <About />
   },
 ]
 

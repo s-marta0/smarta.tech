@@ -1,3 +1,16 @@
-<svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13 1H9.72727C8.28064 1 6.89325 1.63214 5.87033 2.75736C4.8474 3.88258 4.27273 5.4087 4.27273 7V10.6H1V15.4H4.27273V25H8.63636V15.4H11.9091L13 10.6H8.63636V7C8.63636 6.68174 8.7513 6.37652 8.95588 6.15147C9.16047 5.92643 9.43795 5.8 9.72727 5.8H13V1Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 14 26">
+  <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #72fd7d;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M13,1h-3.3c-1.4,0-2.8.6-3.9,1.8-1,1.1-1.6,2.7-1.6,4.2v3.6H1v4.8h3.3v9.6h4.4v-9.6h3.3l1.1-4.8h-4.4v-3.6c0-.3.1-.6.3-.8.2-.2.5-.4.8-.4h3.3V1Z"/>
 </svg>
