@@ -11,15 +11,6 @@ type State = {
 }
 
 
-// Map section names to filter categories
-const SECTION_NAME_TO_CATEGORY: { [key: string]: string } = {
-  'Interactive Installations': 'interactive',
-  'XR': 'xr',
-  'A/V Concerts': 'av-concerts',
-  'Digital Theatre': 'digital-theatre',
-}
-
-
 class Projects extends React.Component<RouteComponentProps, State> {
   constructor(props: RouteComponentProps) {
     super(props);
@@ -32,13 +23,12 @@ class Projects extends React.Component<RouteComponentProps, State> {
   getAllProjects = (): Array<Project & { category: string }> => {
     const context = this.context as any;
     const { contentful } = context;
-    if (!contentful?.sections) return [];
+    if (!contentful?.sectionV2s) return [];
 
     const allProjects: Array<Project & { category: string }> = [];
 
-    contentful.sections.forEach((section: any) => {
-      const sectionName = section.name;
-      const category = sectionName ? SECTION_NAME_TO_CATEGORY[sectionName] : null;
+    contentful.sectionV2s.forEach((section: any) => {
+      const category = section.name;
       if (category && section.projects) {
         section.projects.forEach((project: Project) => {
           allProjects.push({ ...project, category });
@@ -147,12 +137,7 @@ class Projects extends React.Component<RouteComponentProps, State> {
                 className={`Projects__filter-btn ${(filter === 'all' && !activeFilter) || activeFilter === filter ? 'active' : ''}`}
                 onClick={() => this.setState({ activeFilter: filter === 'all' ? null : filter })}
               >
-                {filter === 'all' ? 'All' : 
-                 filter === 'interactive' ? 'Interactive Installations' :
-                 filter === 'xr' ? 'XR' :
-                 filter === 'av-concerts' ? 'A/V Concerts' :
-                 filter === 'digital-theatre' ? 'Digital Theatre' :
-                 filter}
+                {filter === 'all' ? 'All' : filter}
               </button>
             ))}
           </div>

@@ -11,16 +11,19 @@ const SingleProject: React.FC = () => {
   const history = useHistory()
   const { contentful } = React.useContext(Context)
   
-  // Find the project across all sections
+  // Find the project across all sections (sectionV2 first, then legacy sections)
   let project: Project | null = null
 
-  if (contentful?.sections) {
-    for (const section of contentful.sections) {
-      const foundProject = section.projects?.find((p: Project) => p.id === projectId)
-      if (foundProject) {
-        project = foundProject
-        break
-      }
+  const sectionsToSearch = [
+    ...(contentful?.sectionV2s ?? []),
+    ...(contentful?.sections ?? []),
+  ]
+
+  for (const section of sectionsToSearch) {
+    const foundProject = section.projects?.find((p: Project) => p.id === projectId)
+    if (foundProject) {
+      project = foundProject
+      break
     }
   }
 

@@ -4,6 +4,7 @@ import { Project, Section } from './models'
 export type ContentfulLocale = {
   projects?: Project[]
   sections?: Section[]
+  sectionV2s?: Section[]
 }
 
 export type StateType = {
