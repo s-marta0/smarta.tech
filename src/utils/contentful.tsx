@@ -76,8 +76,8 @@ const loadContentfulData = async () => {
   const client = createContentfulClient()
 
   return [
-    await parseContentfulItems((await client.getEntries({ limit: 200, })).items),
-    await parseContentfulItems((await client.getEntries({ limit: 200, locale: 'fr' })).items)
+    await parseContentfulItems((await client.getEntries({ limit: 200, include: 5 })).items),
+    await parseContentfulItems((await client.getEntries({ limit: 200, include: 5, locale: 'fr' })).items)
   ]
 }
 

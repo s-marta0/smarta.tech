@@ -3,6 +3,8 @@ import { useParams, useHistory, Link } from "react-router-dom"
 import { Context } from "../components/Store"
 import { Project } from "../components/Store/Types/models"
 import ContentfulLayout from "../components/ContentfulLayout"
+import ProjectBlocks from "../components/ProjectBlocks"
+import { matchesProject } from "../utils/slugify"
 import Linkify from 'react-linkify'
 
 
@@ -20,7 +22,7 @@ const SingleProject: React.FC = () => {
   ]
 
   for (const section of sectionsToSearch) {
-    const foundProject = section.projects?.find((p: Project) => p.id === projectId)
+    const foundProject = section.projects?.find((p: Project) => matchesProject(p, projectId))
     if (foundProject) {
       project = foundProject
       break
@@ -57,22 +59,28 @@ const SingleProject: React.FC = () => {
 
         {/* Project Content */}
         <div className="SingleProject__content">
-          {project.title && (
-            <h1 className="SingleProject__title">
-              <Linkify>
-                {typeof project.title === 'string' ? project.title : project.title}
-              </Linkify>
-            </h1>
-          )}
-          {project.description && (
-            <div className="SingleProject__description">
-              <Linkify>
-                {typeof project.description === 'string' ? project.description : project.description}
-              </Linkify>
-            </div>
-          )}
-          {project.media && project.media.length > 0 && (
-            <ContentfulLayout projects={[project]} />
+          {project.blocks && project.blocks.length > 0 ? (
+            <ProjectBlocks blocks={project.blocks} />
+          ) : (
+            <>
+              {project.title && (
+                <h1 className="SingleProject__title">
+                  <Linkify>
+                    {typeof project.title === 'string' ? project.title : project.title}
+                  </Linkify>
+                </h1>
+              )}
+              {project.description && (
+                <div className="SingleProject__description">
+                  <Linkify>
+                    {typeof project.description === 'string' ? project.description : project.description}
+                  </Linkify>
+                </div>
+              )}
+              {project.media && project.media.length > 0 && (
+                <ContentfulLayout projects={[project]} />
+              )}
+            </>
           )}
         </div>
       </div>

@@ -35,20 +35,23 @@ const ContentfulLayout: React.FC<ContentfulLayoutProps> = ({
         }
         {(project.title || project.description) &&
           <div className='mb-4' />}
-        {project.link?.includes('youtu') ?
+        {project.link?.includes('youtu') &&
           <Video
-            className=""
+            className="mb-4"
             src={project.link}
             autoplay={project.autoplay || false}
-            mobile={project.media?.[0].file.url}
+            mobile={project.media?.[0]?.file.url}
           />
-          :
+        }
+        {project.media?.map((media, index) =>
           <Img
-            src={project.media?.[0].file.url}
+            key={index}
+            className="mb-4"
+            src={media.file.url}
             description={typeof project.description === 'string' ? project.description : ''}
             title={typeof project.title === 'string' ? project.title : ''}
           />
-        }
+        )}
       </div>
     )}
   </div>

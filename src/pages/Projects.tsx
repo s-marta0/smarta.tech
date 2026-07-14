@@ -2,6 +2,7 @@ import React from "react"
 import { withRouter, RouteComponentProps } from "react-router-dom"
 import { Context } from "../components/Store"
 import { Project } from "../components/Store/Types/models"
+import { projectSlug } from "../utils/slugify"
 import Linkify from 'react-linkify'
 
 
@@ -79,7 +80,7 @@ class Projects extends React.Component<RouteComponentProps, State> {
       : project.title;
 
     const handleClick = () => {
-      this.props.history.push(`/projects/${project.id}`);
+      this.props.history.push(`/projects/${projectSlug(project)}`);
     };
 
     const itemHeight = this.getProjectHeight(project.id);
