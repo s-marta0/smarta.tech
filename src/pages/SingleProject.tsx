@@ -59,28 +59,26 @@ const SingleProject: React.FC = () => {
 
         {/* Project Content */}
         <div className="SingleProject__content">
+          {project.title && (
+            <h1 className="SingleProject__title">
+              <Linkify>
+                {typeof project.title === 'string' ? project.title : project.title}
+              </Linkify>
+            </h1>
+          )}
+          {project.description && (
+            <div className="SingleProject__description">
+              <Linkify>
+                {typeof project.description === 'string' ? project.description : project.description}
+              </Linkify>
+            </div>
+          )}
           {project.blocks && project.blocks.length > 0 ? (
             <ProjectBlocks blocks={project.blocks} />
           ) : (
-            <>
-              {project.title && (
-                <h1 className="SingleProject__title">
-                  <Linkify>
-                    {typeof project.title === 'string' ? project.title : project.title}
-                  </Linkify>
-                </h1>
-              )}
-              {project.description && (
-                <div className="SingleProject__description">
-                  <Linkify>
-                    {typeof project.description === 'string' ? project.description : project.description}
-                  </Linkify>
-                </div>
-              )}
-              {project.media && project.media.length > 0 && (
-                <ContentfulLayout projects={[project]} />
-              )}
-            </>
+            project.media && project.media.length > 0 && (
+              <ContentfulLayout projects={[project]} />
+            )
           )}
         </div>
       </div>

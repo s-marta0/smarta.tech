@@ -658,12 +658,22 @@ figure
       color: rgba(255, 255, 255, 0.85)
     &--text-left
       flex-direction: row-reverse
+    &--img-large
+      .Blocks__image-text__image
+        flex: 2 1 0
+    &--img-wide
+      .Blocks__image-text__image
+        flex: 3 1 0
     @include media-breakpoint-down(md)
       flex-direction: column
       gap: rem(24)
       align-items: stretch
       &--text-left
         flex-direction: column
+      &--img-large,
+      &--img-wide
+        .Blocks__image-text__image
+          flex: 1 1 auto
 
 .Projects
   padding-top: rem(100)
@@ -716,7 +726,7 @@ figure
     z-index: 1
     break-inside: avoid
     page-break-inside: avoid
-    display: inline-block
+    display: block
     width: 100%
     margin-bottom: rem(30)
     vertical-align: top
@@ -873,6 +883,7 @@ figure
     font-size: rem(36)
     color: $light
     margin-bottom: rem(30)
+    text-align: center
     @include media-breakpoint-down(md)
       font-size: rem(28)
   &__description

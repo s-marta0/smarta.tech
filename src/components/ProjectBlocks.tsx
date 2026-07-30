@@ -35,6 +35,9 @@ const ProjectBlocks: React.FC<ProjectBlocksProps> = ({ blocks }) =>
         case 'video':
           return block.link ? (
             <div key={block.id} className="Blocks__full">
+              {block.heading &&
+                <h2 className="Blocks__heading">{block.heading}</h2>
+              }
               <Video
                 className=""
                 src={block.link}
@@ -46,13 +49,17 @@ const ProjectBlocks: React.FC<ProjectBlocksProps> = ({ blocks }) =>
         case 'row-2':
         case 'row-3':
           return (
-            <div
-              key={block.id}
-              className={`Blocks__row Blocks__row--${block.variant === 'row-3' ? 3 : 2}${block.crop ? ' Blocks__row--crop' : ''}`}
-            >
-              {images.map((image, index) =>
-                <Img key={index} src={image.file.url} />
-              )}
+            <div key={block.id}>
+              {block.heading &&
+                <h2 className="Blocks__heading">{block.heading}</h2>
+              }
+              <div
+                className={`Blocks__row Blocks__row--${block.variant === 'row-3' ? 3 : 2}${block.crop ? ' Blocks__row--crop' : ''}`}
+              >
+                {images.map((image, index) =>
+                  <Img key={index} src={image.file.url} />
+                )}
+              </div>
             </div>
           )
 
@@ -60,7 +67,7 @@ const ProjectBlocks: React.FC<ProjectBlocksProps> = ({ blocks }) =>
           return (
             <div
               key={block.id}
-              className={`Blocks__image-text Blocks__image-text--text-${block.textPosition === 'left' ? 'left' : 'right'}`}
+              className={`Blocks__image-text Blocks__image-text--text-${block.textPosition === 'left' ? 'left' : 'right'} Blocks__image-text--img-${block.imageSize || 'equal'}`}
             >
               <div className="Blocks__image-text__image">
                 {images[0] && <Img src={images[0].file.url} />}
@@ -84,6 +91,9 @@ const ProjectBlocks: React.FC<ProjectBlocksProps> = ({ blocks }) =>
         default:
           return (
             <div key={block.id} className="Blocks__full">
+              {block.heading &&
+                <h2 className="Blocks__heading">{block.heading}</h2>
+              }
               {images.map((image, index) =>
                 <Img key={index} src={image.file.url} />
               )}

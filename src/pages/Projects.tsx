@@ -68,9 +68,13 @@ class Projects extends React.Component<RouteComponentProps, State> {
   }
 
   renderProject = (project: Project & { category: string }) => {
-    const firstMedia = project.media?.[0];
-    const hasMedia = !!firstMedia;
-    const mediaUrl = firstMedia?.file?.url || '';
+    // Cover image: the first media asset, or — when media is empty — the
+    // first image found across the project's blocks.
+    const firstBlockImage = project.blocks
+      ?.map((block: any) => block.images?.[0]?.file?.url)
+      .find(Boolean);
+    const mediaUrl = project.media?.[0]?.file?.url || firstBlockImage || '';
+    const hasMedia = !!mediaUrl;
     const { hoveredProjectId } = this.state;
     const isHovered = hoveredProjectId === project.id;
     
@@ -86,8 +90,8 @@ class Projects extends React.Component<RouteComponentProps, State> {
     const itemHeight = this.getProjectHeight(project.id);
 
     return (
-      <div 
-        key={project.id} 
+      <div
+        key={`${project.id}-${project.category}`}
         className={`Projects__grid-item ${isHovered ? 'hovered' : ''}`}
         style={{ height: `${itemHeight}px` }}
         onMouseEnter={() => this.setState({ hoveredProjectId: project.id })}

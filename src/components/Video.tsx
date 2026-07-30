@@ -29,7 +29,21 @@ const Video: React.FC<VideoProps> = ({
   const src_parsed = getVideoId(src)
   const videoId = src_parsed.replace('https://youtu.be/', '')
   const thumbnail = 'https://img.youtube.com/vi/' + videoId + '/maxresdefault.jpg'
-  
+
+  // Vimeo support: detect a vimeo url and pull out the id (+ optional
+  // privacy hash, e.g. vimeo.com/123456789/abcdef).
+  const isVimeo = /vimeo\.com/.test(src || '')
+  const vimeoParts = (src || '').split('?')[0].split('/').filter(Boolean)
+  const vimeoIdx = vimeoParts.findIndex(p => /^\d+$/.test(p))
+  const vimeoId = vimeoIdx >= 0 ? vimeoParts[vimeoIdx] : ''
+  const vimeoHash =
+    vimeoIdx >= 0 && vimeoParts[vimeoIdx + 1] && !/^\d+$/.test(vimeoParts[vimeoIdx + 1])
+      ? vimeoParts[vimeoIdx + 1]
+      : ''
+  const vimeoHashParam = vimeoHash ? `h=${vimeoHash}&` : ''
+  const vimeoAutoplaySrc = `https://player.vimeo.com/video/${vimeoId}?${vimeoHashParam}autoplay=1&muted=1&loop=1&background=1&dnt=1`
+  const vimeoClickSrc = `https://player.vimeo.com/video/${vimeoId}?${vimeoHashParam}autoplay=1&dnt=1`
+
   // Hide hint after 5 seconds
   React.useEffect(() => {
     if (autoplay && showHint) {
@@ -198,6 +212,49 @@ const Video: React.FC<VideoProps> = ({
         onClick={() => set_thumbnail_is_clicked(true)}
       />
     </div>
+
+  if (isVimeo) {
+    const showPoster = mobile && !autoplay && !thumbnail_is_clicked
+    return (
+      <div className={`video ${className}`}>
+        {isMobile && mobile && !thumbnail_is_clicked ?
+          <img
+            src={mobile}
+            className="video__mobile mobile-only intense lazyload"
+            alt=""
+            loading="lazy"
+            onClick={() => set_thumbnail_is_clicked(true)}
+          />
+          :
+          showPoster ?
+            <div className='video__thumbnail'>
+              <Img
+                crop
+                className='video__thumbnail__img'
+                src={mobile}
+                onClick={() => set_thumbnail_is_clicked(true)}
+              />
+              <img
+                alt=''
+                className='video__thumbnail__play-buttonn'
+                src={logo}
+                onClick={() => set_thumbnail_is_clicked(true)}
+              />
+            </div>
+            :
+            <iframe
+              src={autoplay ? vimeoAutoplaySrc : vimeoClickSrc}
+              className='video__iframe lazyload'
+              title={`vimeo-${vimeoId}`}
+              frameBorder='0'
+              allow='autoplay; fullscreen; picture-in-picture'
+              allowFullScreen
+              loading='lazy'
+            />
+        }
+      </div>
+    )
+  }
 
   return (
     <div

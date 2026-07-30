@@ -10,6 +10,7 @@ export interface Block extends ContentfulItem {
   heading?: string
   text?: RichTextNode
   textPosition?: 'left' | 'right'
+  imageSize?: 'equal' | 'large' | 'wide'
   crop?: boolean
   link?: string
   autoplay?: boolean
