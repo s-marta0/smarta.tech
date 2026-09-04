@@ -133,7 +133,6 @@ class Projects extends React.Component<RouteComponentProps, State> {
 
     return (
       <div className="Projects">
-        <div className="container">
           {/* Filter Buttons */}
           <div className="Projects__filters">
             {allFilters.map(filter => (
@@ -157,7 +156,6 @@ class Projects extends React.Component<RouteComponentProps, State> {
               </div>
             )}
           </div>
-        </div>
       </div>
     );
   }

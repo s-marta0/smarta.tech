@@ -87,6 +87,18 @@ const Video: React.FC<VideoProps> = ({
             func: 'setPlaybackQuality',
             args: ['highres']
           }), '*')
+
+          // Make sure captions/subtitles stay off
+          iframe.postMessage(JSON.stringify({
+            event: 'command',
+            func: 'unloadModule',
+            args: ['captions']
+          }), '*')
+          iframe.postMessage(JSON.stringify({
+            event: 'command',
+            func: 'unloadModule',
+            args: ['cc']
+          }), '*')
         }
       }
       
@@ -137,7 +149,7 @@ const Video: React.FC<VideoProps> = ({
     <div style={{ position: 'relative', width: '100%', height: '100%', cursor: 'pointer' }}>
       <iframe
         ref={iframeRef}
-        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;playerapiid=featuredytplayer&amp;controls=0&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;color=white&amp;iv_load_policy=3&amp;theme=light&amp;wmode=transparent&amp;playlist=${videoId}&amp;mute=1&amp;vq=highres`}
+        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;playerapiid=featuredytplayer&amp;controls=0&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;color=white&amp;iv_load_policy=3&amp;theme=light&amp;wmode=transparent&amp;playlist=${videoId}&amp;mute=1&amp;vq=highres&cc_load_policy=0`}
         className={`video__iframe ${mobile && "desktop-only"} lazyload`}
         title={src_parsed}
         frameBorder="0"

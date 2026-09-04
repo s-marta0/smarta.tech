@@ -76,7 +76,7 @@ body
 
 .Header
   &--placeholder
-    border: none
+    border: none !important
     margin-bottom: rem(50)
   &--fixed
     position: fixed
@@ -145,6 +145,7 @@ body
     background-image: url(./img/burger.svg)
     @extend .def-img
     margin-right: rem(16)
+    user-select: none
 
 .Link
   color: $light
@@ -261,9 +262,7 @@ body
   padding-bottom: 70px
 
 .About
-  padding-top: rem(20)
   padding-bottom: rem(40)
-  transition: filter 0.5s ease
   position: relative
   &.photo-hovered
     .About__content
@@ -272,61 +271,47 @@ body
       filter: blur(8px)
     .About__photo
       filter: blur(0) !important
+      @media (max-width: 1199.98px)
+        padding-right: 0 !important
     .About__photo-wrapper
       filter: blur(0) !important
     .About__photo-wrapper img
       filter: blur(0) !important
-  .container
-    @include media-breakpoint-up(lg)
-      padding-left: 0
-      padding-right: 15px
-      position: relative
-  .row
+  &__main
     display: flex
-    flex-wrap: wrap
-    margin-left: 0
-    margin-right: 0
-    &:first-of-type
-      @include media-breakpoint-up(lg)
-        align-items: flex-start
-        position: relative
-      .col-lg-6:first-child
-        @include media-breakpoint-up(lg)
-          padding-left: 0 !important
-          padding-right: rem(60)
-          margin-left: -15px
-      .col-lg-6:last-child
-        @include media-breakpoint-up(lg)
-          padding-left: rem(60)
-          padding-right: 0
+    // mobile: photo on top, text below
+    flex-direction: column-reverse
+    @media (min-width: 992px)
+      // DOM order is already content, photo
+      flex-direction: row
+      align-items: flex-start
+      position: relative
   &__content
-    @extend .d-flex
-    @extend .flex-column
-    @extend .align-items-start
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
     width: 100%
+    transition: filter 0.5s ease
+    will-change: filter
     overflow: visible
     position: relative
-    @include media-breakpoint-up(lg)
-      padding-left: 0 !important
+    @media (min-width: 992px)
+      flex: 0 0 50%
+      max-width: 50%
       padding-right: rem(60)
-      margin-left: -15px
-      display: flex
-      flex-direction: column
-      align-items: flex-start
-      justify-content: flex-start
-    @include media-breakpoint-down(md)
-      padding-left: 0 !important
-      padding-right: 0
   &__name
     font-family: 'Zagolovki', Helvetica, sans-serif
     font-size: rem(144)
     line-height: 1.0
     color: #72FD7D
     margin-bottom: rem(30)
-    @include media-breakpoint-down(md)
+    @media (max-width: 1200px)
+      font-size: rem(128)
+    @media (max-width: 991.98px)
       font-size: rem(96)
       margin-bottom: rem(25)
-    @include media-breakpoint-down(sm)
+    @media (max-width: 767.98px)
       font-size: rem(72)
       margin-bottom: rem(20)
   &__text
@@ -334,7 +319,7 @@ body
     width: 100%
     overflow: visible
     position: relative
-    @include media-breakpoint-down(md)
+    @media (max-width: 991.98px)
       margin-bottom: rem(25)
   &__paragraph
     font-size: rem(20)
@@ -343,11 +328,11 @@ body
     margin-bottom: rem(18)
     word-wrap: break-word
     overflow-wrap: break-word
-    @include media-breakpoint-down(md)
+    @media (max-width: 991.98px)
       font-size: rem(18)
       line-height: 1.5
       margin-bottom: rem(16)
-    @include media-breakpoint-down(sm)
+    @media (max-width: 767.98px)
       font-size: rem(16)
       line-height: 1.5
       margin-bottom: rem(14)
@@ -355,30 +340,9 @@ body
       margin-bottom: 0
   &__contact
     margin-top: rem(30)
-    display: block !important
-    width: 100% !important
+    width: 100%
     position: relative
-    clear: both
-    flex: none !important
-    max-width: 100% !important
-    padding-left: 0 !important
-    padding-right: 0 !important
-    @include media-breakpoint-up(lg)
-      margin-top: rem(30)
-      padding-top: 0
-      padding-left: 0 !important
-      padding-right: 0 !important
-      display: block !important
-      padding-bottom: 0
-      position: relative
-      z-index: 10
-      margin-left: 0
-    @include media-breakpoint-down(md)
-      margin-top: rem(30)
-      padding-top: 0
-      padding-left: 0 !important
-      padding-right: 0 !important
-      padding-bottom: 0
+    z-index: 10
   &__social-links
     gap: rem(20)
     display: flex
@@ -387,7 +351,7 @@ body
     flex-wrap: nowrap
     width: auto
     align-items: center
-    @include media-breakpoint-down(md)
+    @media (max-width: 991.98px)
       gap: rem(15)
   &__social-item
     width: 32px
@@ -417,29 +381,26 @@ body
       img
         opacity: 0.8
   &__photo
-    @extend .d-flex
-    @extend .justify-content-center
-    margin-bottom: rem(40)
+    display: flex
+    justify-content: center
+    margin-bottom: rem(30)
     filter: blur(0) !important
-    @include media-breakpoint-up(lg)
+    //max-height: 800px
+    @media (min-width: 992px)
+      flex: 0 0 50%
+      max-width: 50%
       margin-bottom: 0
       padding-left: rem(60)
-      display: flex
+      padding-bottom: rem(32)
       align-items: flex-end
       justify-content: flex-start
-      padding-top: 0
-      padding-bottom: rem(32)
-    @include media-breakpoint-down(md)
-      margin-bottom: rem(30)
-      padding-left: 0
-      padding-bottom: 0
   &__photo-wrapper
     width: 100%
     max-width: 500px
     position: relative
     overflow: hidden
     border-radius: 4px
-    @include media-breakpoint-up(lg)
+    @media (min-width: 992px)
       display: flex
       align-items: flex-end
       height: 100%
@@ -451,16 +412,16 @@ body
       object-position: center
       position: relative
       z-index: 0
-      @include media-breakpoint-up(lg)
+      @media (min-width: 992px)
         height: calc(100vh - 200px)
         min-height: 700px
         object-fit: cover
         object-position: top
-      @include media-breakpoint-down(md)
+      @media (max-width: 991.98px)
         height: auto
         min-height: 400px
         max-height: 500px
-      @include media-breakpoint-down(sm)
+      @media (max-width: 767.98px)
         height: auto
         min-height: 300px
         max-height: 400px
@@ -468,8 +429,10 @@ body
       transform: scale(1.02)
       filter: brightness(1.1) contrast(1.05)
   &__footer
+    transition: filter 0.5s ease
+    will-change: filter
     margin-top: rem(60)
-    @include media-breakpoint-down(md)
+    @media (max-width: 991.98px)
       margin-top: rem(40)
   &__credits
     text-align: center
@@ -477,7 +440,7 @@ body
     color: rgba(255, 255, 255, 0.5)
     padding-top: rem(40)
     border-top: 1px solid rgba(255, 255, 255, 0.1)
-    @include media-breakpoint-down(md)
+    @media (max-width: 991.98px)
       font-size: rem(12)
       padding-top: rem(30)
 
@@ -676,7 +639,6 @@ figure
           flex: 1 1 auto
 
 .Projects
-  padding-top: rem(100)
   position: relative
   &__filters
     @extend .d-flex
@@ -860,7 +822,6 @@ figure
 
 
 .SingleProject
-  padding-top: rem(100)
   &__back
     margin-bottom: rem(40)
   &__back-btn
