@@ -20,17 +20,17 @@ const routes: Route[] = [
     comp: <Main />
   },
   {
-    label: "Projects",
+    label: "Projets",
     link: "/projects",
     comp: <Projects />
   },
   {
-    label: "Publications/Talks",
+    label: "Recherche",
     link: "/publications-talks",
     comp: <PublicationsTalks />
   },
   {
-    label: "About/Contact",
+    label: "Info",
     link: "/about-contact",
     comp: <About />
   },

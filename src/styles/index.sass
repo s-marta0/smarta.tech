@@ -261,6 +261,70 @@ body
 .contact_text
   padding-bottom: 70px
 
+.Research
+  padding-top: rem(100)
+  padding-bottom: rem(80)
+  max-width: rem(900)
+  margin: 0 auto
+  &__title
+    font-family: 'Zagolovki', Helvetica, sans-serif
+    font-size: rem(64)
+    color: #72FD7D
+    margin-bottom: rem(50)
+    @include media-breakpoint-down(md)
+      font-size: rem(44)
+      margin-bottom: rem(35)
+  &__section
+    margin-bottom: rem(60)
+    &-title
+      font-family: 'Zagolovki', Helvetica, sans-serif
+      font-size: rem(28)
+      color: $light
+      margin-bottom: rem(28)
+      padding-bottom: rem(10)
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+      @include media-breakpoint-down(md)
+        font-size: rem(22)
+  &__item
+    display: flex
+    flex-direction: row
+    gap: rem(28)
+    margin-bottom: rem(28)
+    @include media-breakpoint-down(sm)
+      flex-direction: column
+      gap: rem(4)
+  &__year
+    flex: 0 0 rem(70)
+    font-family: 'Zagolovki', Helvetica, sans-serif
+    font-size: rem(20)
+    color: rgba(255, 255, 255, 0.6)
+    padding-top: rem(2)
+  &__body
+    flex: 1 1 0
+    min-width: 0
+  &__item-title
+    font-size: rem(20)
+    font-weight: bold
+    color: $light
+    line-height: 1.35
+    margin-bottom: rem(6)
+  &__desc
+    font-size: rem(18)
+    color: rgba(255, 255, 255, 0.75)
+    line-height: 1.5
+  &__link
+    display: inline-block
+    margin-top: rem(6)
+    font-size: rem(16)
+    color: #72FD7D
+    text-decoration: underline
+    word-break: break-all
+    &:hover
+      color: $light
+  &__empty
+    color: rgba(255, 255, 255, 0.5)
+    font-size: rem(18)
+
 .About
   padding-bottom: rem(40)
   position: relative
@@ -667,15 +731,13 @@ figure
       color: $dark
       border-color: $light
   &__grid
-    column-count: 3
-    column-gap: rem(30)
-    column-fill: balance
-    @include media-breakpoint-down(md)
-      column-count: 2
-      column-gap: rem(20)
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: rem(30)
+    align-items: start
     @include media-breakpoint-down(sm)
-      column-count: 1
-      column-gap: rem(20)
+      grid-template-columns: 1fr
+      gap: rem(20)
     &.has-hover
       .Projects__grid-item:not(.hovered)
         filter: blur(4px)
@@ -686,17 +748,10 @@ figure
     transition: transform 0.3s ease, filter 0.4s ease, opacity 0.4s ease
     position: relative
     z-index: 1
-    break-inside: avoid
-    page-break-inside: avoid
-    display: block
     width: 100%
-    margin-bottom: rem(30)
-    vertical-align: top
+    height: auto !important
+    aspect-ratio: 3 / 4
     will-change: transform, filter, opacity
-    @include media-breakpoint-down(md)
-      margin-bottom: rem(20)
-    @include media-breakpoint-down(sm)
-      margin-bottom: rem(20)
     &.hovered
       z-index: 100
       filter: blur(0px) !important

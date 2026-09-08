@@ -87,13 +87,10 @@ class Projects extends React.Component<RouteComponentProps, State> {
       this.props.history.push(`/projects/${projectSlug(project)}`);
     };
 
-    const itemHeight = this.getProjectHeight(project.id);
-
     return (
       <div
         key={`${project.id}-${project.category}`}
         className={`Projects__grid-item ${isHovered ? 'hovered' : ''}`}
-        style={{ height: `${itemHeight}px` }}
         onMouseEnter={() => this.setState({ hoveredProjectId: project.id })}
         onMouseLeave={() => this.setState({ hoveredProjectId: null })}
         onClick={handleClick}
