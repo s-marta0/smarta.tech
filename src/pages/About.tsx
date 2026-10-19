@@ -109,6 +109,8 @@ class About extends React.Component<{}, State> {
           <ExternalLink newTab to="https://t.me/the_sociophobic">
             @the_sociophobic
           </ExternalLink>
+          <br />
+          site by: Konstantin Luferenko
         </div>
       </div>
     </div>
