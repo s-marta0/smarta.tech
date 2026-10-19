@@ -66,7 +66,7 @@ const Img: React.FC<ImgProps> = ({
         alt={description || ""}
         data-title={title || ""}
         data-caption={description || ""}
-        className={`Img__img ${!onClick && 'intense lazyload'}`}
+        className={`Img__img ${!onClick ? 'intense lazyload' : ''}`}
         loading="lazy"
         onClick={e => onClick?.(e)}
       />
