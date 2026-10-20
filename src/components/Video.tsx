@@ -28,7 +28,8 @@ const Video: React.FC<VideoProps> = ({
   const iframeRef = React.useRef<HTMLIFrameElement>(null)
   const src_parsed = getVideoId(src)
   const videoId = src_parsed.replace('https://youtu.be/', '')
-  const thumbnail = 'https://img.youtube.com/vi/' + videoId + '/maxresdefault.jpg'
+  // hqdefault always exists; maxresdefault 404s for videos without an HD source
+  const thumbnail = 'https://img.youtube.com/vi/' + videoId + '/hqdefault.jpg'
 
   // Vimeo support: detect a vimeo url and pull out the id (+ optional
   // privacy hash, e.g. vimeo.com/123456789/abcdef).

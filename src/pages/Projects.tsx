@@ -40,15 +40,23 @@ class Projects extends React.Component<RouteComponentProps, State> {
     return allProjects;
   }
 
+  // Extract a 4-digit year from the project title for chronological sorting
+  getYear = (project: Project): number => {
+    const title = typeof project.title === 'string' ? project.title : '';
+    const match = title.match(/\b(19|20)\d{2}\b/);
+    return match ? parseInt(match[0], 10) : 0;
+  }
+
   getFilteredProjects = (): Array<Project & { category: string }> => {
     const allProjects = this.getAllProjects();
     const { activeFilter } = this.state;
 
-    if (!activeFilter) {
-      return allProjects;
-    }
+    const base = activeFilter
+      ? allProjects.filter(project => project.category === activeFilter)
+      : allProjects;
 
-    return allProjects.filter(project => project.category === activeFilter);
+    // newest first; projects without a year in the title go last
+    return [...base].sort((a, b) => this.getYear(b) - this.getYear(a));
   }
 
   getCategories = (): string[] => {
