@@ -281,7 +281,11 @@ const Video: React.FC<VideoProps> = ({
             loading="lazy"
           />
           :
-          playing_video()
+          // mobile without a poster: tappable thumbnail (iOS blocks autoplay)
+          thumbnail_is_clicked ?
+            plaing_video_with_sound()
+            :
+            render_thumbnail()
         :
         autoplay ?
           playing_video()
