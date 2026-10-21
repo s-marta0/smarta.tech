@@ -1,6 +1,11 @@
 import React from 'react'
 
 import { File } from './Store/Types/contentfulTypes'
+import { resizedSrcSet, resizedUrl, zoomUrl } from '../utils/contentfulImage'
+
+
+// Default: the image spans the container (1110px at xl, full width below).
+const SIZES = '(min-width: 1200px) 1110px, 100vw'
 
 
 type ImgProps = {
@@ -11,6 +16,7 @@ type ImgProps = {
   title?: string
   className?: string
   crop?: boolean
+  sizes?: string
   onClick?: (e: any) => void
 }
 
@@ -22,6 +28,7 @@ const Img: React.FC<ImgProps> = ({
   title,
   className,
   crop,
+  sizes = SIZES,
   onClick,
 }) => {
   // const [fullscreen, setFullscreen] = React.useState(false)
@@ -30,6 +37,10 @@ const Img: React.FC<ImgProps> = ({
   // const imgRef: any = React.useRef(null)
   const containerRef: any = React.useRef(null)
   // let resizeObs
+
+  // A Contentful asset gets resized copies; a plain `src` is used as is.
+  const asset = file?.file
+  const srcSet = resizedSrcSet(asset)
 
   // React.useEffect(() => {
   //   resizeObs = new ResizeObserver(setOrientation.bind(this))
@@ -62,7 +73,10 @@ const Img: React.FC<ImgProps> = ({
         `}
       /> */}
       <img
-        src={src}
+        src={asset ? resizedUrl(asset, 1400) : src}
+        srcSet={srcSet}
+        sizes={srcSet && sizes}
+        data-image={asset && zoomUrl(asset)}
         alt={description || ""}
         data-title={title || ""}
         data-caption={description || ""}

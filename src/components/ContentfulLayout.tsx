@@ -5,6 +5,7 @@ import Linkify from 'react-linkify'
 import Video from './Video'
 import Img from '../components/Img'
 import { Project } from './Store/Types/models'
+import { resizedUrl } from '../utils/contentfulImage'
 
 
 type ContentfulLayoutProps = {
@@ -40,14 +41,14 @@ const ContentfulLayout: React.FC<ContentfulLayoutProps> = ({
             className="mb-4"
             src={project.link}
             autoplay={project.autoplay || false}
-            mobile={project.media?.[0]?.file.url}
+            mobile={resizedUrl(project.media?.[0]?.file, 1000)}
           />
         }
         {project.media?.map((media, index) =>
           <Img
             key={index}
             className="mb-4"
-            src={media.file.url}
+            file={media}
             description={typeof project.description === 'string' ? project.description : ''}
             title={typeof project.title === 'string' ? project.title : ''}
           />
