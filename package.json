@@ -33,7 +33,7 @@
     "predeploy": "npm run build",
     "deploy": "yarn run build && echo smarta.tech > ./build/CNAME && gh-pages -d build",
     "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build && node scripts/prerender-routes.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
