@@ -45,6 +45,15 @@ const Video: React.FC<VideoProps> = ({
   const vimeoAutoplaySrc = `https://player.vimeo.com/video/${vimeoId}?${vimeoHashParam}autoplay=1&muted=1&loop=1&background=1&dnt=1`
   const vimeoClickSrc = `https://player.vimeo.com/video/${vimeoId}?${vimeoHashParam}autoplay=1&dnt=1`
 
+  // YouTube embed urls. Plain `&` here: inside a JS string `&amp;` stays
+  // literal and YouTube drops every param after the first one.
+  const youtubeParams = 'autoplay=1&mute=1&playsinline=1&enablejsapi=1&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&vq=highres&cc_load_policy=0'
+  const youtubeAutoplaySrc = `https://www.youtube.com/embed/${videoId}?${youtubeParams}&loop=1&playlist=${videoId}&playerapiid=featuredytplayer&color=white&theme=light&wmode=transparent`
+  // Always starts muted; sound is toggled through the JS API (see effect
+  // below), so the src never changes and the video doesn't restart.
+  const youtubeClickSrc = `https://www.youtube.com/embed/${videoId}?${youtubeParams}`
+  const youtubeIframeClass = `video__iframe ${mobile ? 'desktop-only' : ''} lazyload`
+
   // Hide hint after 5 seconds
   React.useEffect(() => {
     if (autoplay && showHint) {
@@ -56,7 +65,7 @@ const Video: React.FC<VideoProps> = ({
   }, [autoplay, showHint])
   
   React.useEffect(() => {
-    if (iframeRef.current && autoplay) {
+    if (iframeRef.current && (autoplay || thumbnail_is_clicked)) {
       const iframe = iframeRef.current.contentWindow
       if (iframe) {
         // Set quality to highest available
@@ -74,7 +83,7 @@ const Video: React.FC<VideoProps> = ({
         }), '*')
       }
     }
-  }, [isMuted, autoplay])
+  }, [isMuted, autoplay, thumbnail_is_clicked])
   
   // Set quality after iframe loads - try multiple times as YouTube may need time to initialize
   React.useEffect(() => {
@@ -146,12 +155,14 @@ const Video: React.FC<VideoProps> = ({
     </div>
   );
 
+  // The wrapper must be absolutely positioned: .video gets its height from
+  // padding-top (16:9), so a height:100% wrapper collapses to 0px.
   const playing_video = () =>
-    <div style={{ position: 'relative', width: '100%', height: '100%', cursor: 'pointer' }}>
+    <div className='abs-cover' style={{ cursor: 'pointer' }}>
       <iframe
         ref={iframeRef}
-        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&amp;loop=1&amp;enablejsapi=1&amp;playerapiid=featuredytplayer&amp;controls=0&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;color=white&amp;iv_load_policy=3&amp;theme=light&amp;wmode=transparent&amp;playlist=${videoId}&amp;mute=1&amp;vq=highres&cc_load_policy=0`}
-        className={`video__iframe ${mobile && "desktop-only"} lazyload`}
+        src={youtubeAutoplaySrc}
+        className={youtubeIframeClass}
         title={src_parsed}
         frameBorder="0"
         allow="autoplay"
@@ -179,11 +190,11 @@ const Video: React.FC<VideoProps> = ({
       )}
     </div>
   const plaing_video_with_sound = () =>
-    <div style={{ position: 'relative', width: '100%', height: '100%', cursor: 'pointer' }}>
+    <div className='abs-cover' style={{ cursor: 'pointer' }}>
       <iframe
         ref={iframeRef}
-        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&amp;enablejsapi=1&amp;controls=0&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;iv_load_policy=3&amp;vq=highres&amp;mute=${isMuted ? '1' : '0'}`}
-        className={`video__iframe ${mobile && "desktop-only"} lazyload`}
+        src={youtubeClickSrc}
+        className={youtubeIframeClass}
         title={src_parsed}
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
